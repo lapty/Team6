@@ -1,0 +1,40 @@
+$test: 1px red solid;
+
+.body {
+    margin:0px;
+    padding:0px;
+}
+
+.welcomeWrap {
+    width:100%;
+    height:700px;
+    border:1px red solid;
+    text-align:center;
+    h2 {
+        position:absolute;
+        top:220px;
+        width:100%;
+        font-size:5em;
+        text-align:center;
+        border:$test;
+    }
+    span {
+        width:100%;
+        position: relative;
+        top:550px;
+        text-align:center;
+        border:$test;
+    }
+}
+
+.restWrap {
+    width:100%;
+    height:1000px;
+    border:$test;
+    background-color:rgba(0,255,0,.5);
+
+}
+
+.restBlock {
+    border:1px blue solid;
+}
