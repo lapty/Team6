@@ -11,6 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140916163832) do
+
+  create_table "menus", force: true do |t|
+    t.string   "menu_name"
+    t.string   "menu_section_name"
+    t.string   "item"
+    t.text     "item_description"
+    t.float    "price",             limit: 24
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "restaurants", force: true do |t|
+    t.string   "restaurant_name"
+    t.text     "description"
+    t.float    "latitude",        limit: 24
+    t.float    "longitude",       limit: 24
+    t.text     "address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
