@@ -1,0 +1,12 @@
+class CreateRestaurants < ActiveRecord::Migration
+  def change
+    create_table :restaurants do |t|
+      t.string :restaurant_name
+      t.text :description
+      t.float :latitude
+      t.float :longitude
+      t.text :address
+      t.timestamps
+    end
+  end
+end
