@@ -2,53 +2,47 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-angular.module("menuModule",["ngRoute"])
+#= require_self
+#= require_tree ./controllers
+#= require_tree ./services
+
+var restaurantgroup = angular.module("menuModule",["ngRoute"])
 
   .config(function ($routeProvider) {
 
     $routeProvider
         .when("/", {
-            templateUrl: "",
+            templateUrl: "../assets/restList.html.erb",
             controller: "menuCtrl"
         })
 
         .when("/admin", {
-            templateUrl: "",
-            controller: "menuCtrl"
-        })
-
-        .when("/admin/new", {
-            templateUrl: "",
+            templateUrl: "../assets/restList.html.erb",
             controller: "menuCtrl"
         })
 
         .when("/admin/:id", {
-            templateUrl: "",
+            templateUrl: "../assets/menuList.html.erb",
             controller: "menuCtrl"
         })
 
         .when("/admin/:id/:id", {
-            templateUrl: "",
-            controller: "menuCtrl"
-        })
-
-        .when("/admin/:id/:id/edit", {
-            templateUrl: "",
+            templateUrl: "../assets/menu.html.erb",
             controller: "menuCtrl"
         })
 
         .when("/admin/:id/new", {
-            templateUrl: "",
+            templateUrl: "../assets/menuAdd.html.erb",
             controller: "menuCtrl"
         })
 
         .when("/user/:id", {
-            templateUrl: "",
+            templateUrl: "../assets/menuList.html.erb",
             controller: "menuCtrl"
         })
 
         .when("/user/:id/:id", {
-            templateUrl: "",
+            templateUrl: "../assets/menu.html.erb",
             controller: "menuCtrl"
         })
 
