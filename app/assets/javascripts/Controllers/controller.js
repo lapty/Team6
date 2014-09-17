@@ -9,26 +9,34 @@ angular.module("menuModule")
 
          menuSvc.singleMenu($routeParams.id).then(function (response) {
              $scope.singleMenu = response.data;
-
          });
 
          $scope.addMenu = function (menu) {
-             menuSvc.createMenu(menu).then(function () {
-                 $location.path("/admin/:id");
-             });
+             menuSvc.createMenu(menu);
+         };
 
+         $scope.goToMonza = function () {
+           $location.path("#/admin/monza")
+         };
+
+         $scope.goToPoes = function () {
+           $location.path("#/admin/poes")
+         };
+
+         $scope.goToTacoBoy = function () {
+           $location.path("#/admin/tacoboy")
+         };
+
+         $scope.goToCfb = function () {
+           $location.path("#/admin/cfb")
          };
 
          $scope.editMenu = function (menu) {
-             menuSvc.editMenu(menu).then(function () {
-                 $location.path("/admin/:id");
-             });
+             menuSvc.editMenu(menu);
          };
 
          $scope.deleteMenu = function (id) {
-             menuSvc.deleteMenu(id).then(function () {
-                 $location.path("/admin/:id");
-             });
+             menuSvc.deleteMenu(id);
          };
 
 
@@ -42,25 +50,18 @@ angular.module("menuModule")
 
          menuSvc.singleItem($routeParams.id).then(function (response) {
              $scope.singleItem = response.data;
-
          });
 
          $scope.addItem = function (item) {
-             menuSvc.addItem(item).then(function () {
-                 $location.path("/admin/:id/:id");
-             });
+             menuSvc.addItem(item);
 
          };
 
          $scope.editItem = function (item) {
-             menuSvc.editItem(item).then(function () {
-                 $location.path("/admin/:id/:id");
-             });
+             menuSvc.editItem(item);
          };
 
          $scope.deleteItem = function (id) {
-             menuSvc.deleteItem(id).then(function () {
-                 $location.path("/admin/:id/:id");
-             });
+             menuSvc.deleteItem(id);
          };
 });
