@@ -33,7 +33,6 @@ class MenusController < ApplicationController
   end
 
   def destroy
-    byebug
     @menu.delete
     respond_to do |format|
       format.json { render json: @menu.as_json}
@@ -45,7 +44,6 @@ class MenusController < ApplicationController
     params.require(:menu).permit(:menu_name, :menu_section_name)
   end
   def find_menu
-    byebug
     @menu =Menu.find params[:id]
   end
 end

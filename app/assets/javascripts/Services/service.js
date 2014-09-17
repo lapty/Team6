@@ -58,8 +58,7 @@ angular.module("menuModule")
 
 ////////CRUD FOR MENUS
 
-        var menus = "/menus.json";
-        var menusPath = "/menus"
+        var menus = "/menus";
 
         var getMenus = function(){
           return $http.get(menus);
@@ -77,7 +76,7 @@ angular.module("menuModule")
         };
 
         var deleteMenu = function(menu) {
-          return $http.delete(menusPath + "/" + menu.id + ".json", menu).then(function (response) {
+          return $http.delete(menus + "/" + menu.id, menu).then(function (response) {
                 console.log(response);
                 $rootScope.$broadcast("menu:deleted");
                 $log.info("menu:deleted");
@@ -85,7 +84,7 @@ angular.module("menuModule")
         };
 
         var editMenu = function(menu) {
-          return $http.put(menusPath + "/" + menu.id + ".json", menu).then(function (response) {
+          return $http.put(menus + "/" + menu.id, menu).then(function (response) {
                 $rootScope.$broadcast("menu:updated");
                 $log.info("menu:updated");
             })
@@ -93,7 +92,7 @@ angular.module("menuModule")
 //
 // // CRUD FOR MENU ITEMS
 //
-//         var items = "/menus/:menu_id/items.json";
+//         var items = "/menus/:menu_id/items";
 //
 //         var getItems = function(){
 //           return $http.get(items);
