@@ -1,5 +1,5 @@
 class MenusController < ApplicationController
-  before_action :authenticate_user
+  # before_action :authenticate_user
   before_action :find_menu, only: [:show, :edit, :update, :destory]
   def index
     @menus = Menu.all
@@ -29,11 +29,11 @@ class MenusController < ApplicationController
     @menu = @menu.update_attributes menu_params
     respond_to do |format|
       format.json { render json: @menu.as_json}
-    end  
+    end
   end
 
   def destroy
-    @menu.delete 
+    @menu.delete
     respond_to do |format|
       format.json { render json: @menu.as_json}
     end
