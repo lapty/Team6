@@ -1,40 +1,40 @@
-var restaurantgroup = angular.module("menuModule",["ngRoute"])
+angular.module("menuModule",["ngRoute"])
 
   .config(function ($routeProvider) {
 
     $routeProvider
         .when("/", {
-            templateUrl: "../assets/restList.html.erb",
+            templateUrl: "../assets/user/main.html.erb",
             controller: "menuCtrl"
         })
 
         .when("/admin", {
-            templateUrl: "../assets/restList.html.erb",
+            templateUrl: "../assets/admin/restList.html.erb",
             controller: "menuCtrl"
         })
 
         .when("/admin/:id", {
-            templateUrl: "../assets/menuList.html.erb",
+            templateUrl: "../assets/admin/menuList.html.erb",
             controller: "menuCtrl"
         })
 
         .when("/admin/:id/:id", {
-            templateUrl: "../assets/menu.html.erb",
+            templateUrl: "../assets/admin/menu.html.erb",
             controller: "menuCtrl"
         })
 
         .when("/admin/:id/new", {
-            templateUrl: "../assets/menuAdd.html.erb",
+            templateUrl: "../assets/admin/menuAdd.html.erb",
             controller: "menuCtrl"
         })
 
         .when("/user/:id", {
-            templateUrl: "../assets/menuList.html.erb",
+            templateUrl: "../assets/user/menuList.html.erb",
             controller: "menuCtrl"
         })
 
         .when("/user/:id/:id", {
-            templateUrl: "../assets/menu.html.erb",
+            templateUrl: "../assets/user/menu.html.erb",
             controller: "menuCtrl"
         })
 
