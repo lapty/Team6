@@ -1,6 +1,6 @@
 class MenusController < ApplicationController
   # before_action :authenticate_user
-  before_action :find_menu, only: [:show, :edit, :update, :destory]
+  before_action :find_menu, only: [:show, :edit, :update, :destroy]
   def index
     @menus = Menu.all
     respond_to do |format|
@@ -44,6 +44,6 @@ class MenusController < ApplicationController
     params.require(:menu).permit(:menu_name, :menu_section_name)
   end
   def find_menu
-    @menu =Menu.find_menu params [:id]
+    @menu =Menu.find params[:id]
   end
 end

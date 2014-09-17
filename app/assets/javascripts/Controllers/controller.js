@@ -43,9 +43,9 @@ angular.module("menuModule")
             $scope.menus = menus.data;
          });
 
-         menuSvc.singleMenu($routeParams.id).then(function (response) {
-             $scope.singleMenu = response.data;
-         });
+        //  menuSvc.singleMenu($routeParams.id).then(function (response) {
+        //      $scope.singleMenu = response.data;
+        //  });
 
          $scope.addMenu = function (menu) {
              menuSvc.addMenu(menu);
@@ -77,28 +77,28 @@ angular.module("menuModule")
          };
 
 
-// CRUD FOR MENU ITEMS
-
-        menuSvc.getItems().then(function (items) {
-           $log.info(items);
-            $scope.items = items.data;
-
-         });
-
-         menuSvc.singleItem($routeParams.id).then(function (response) {
-             $scope.singleItem = response.data;
-         });
-
-         $scope.addItem = function (item) {
-             menuSvc.addItem(item);
-
-         };
-
-         $scope.editItem = function (item) {
-             menuSvc.editItem(item);
-         };
-
-         $scope.deleteItem = function (id) {
-             menuSvc.deleteItem(id);
-         };
+// // CRUD FOR MENU ITEMS
+//
+//         menuSvc.getItems().then(function (items) {
+//            $log.info(items);
+//             $scope.items = items.data;
+//
+//          });
+//
+//          menuSvc.singleItem($routeParams.id).then(function (response) {
+//              $scope.singleItem = response.data;
+//          });
+//
+//          $scope.addItem = function (item) {
+//              menuSvc.addItem(item);
+//
+//          };
+//
+//          $scope.editItem = function (item) {
+//              menuSvc.editItem(item);
+//          };
+//
+//          $scope.deleteItem = function (id) {
+//              menuSvc.deleteItem(id);
+//          };
 });

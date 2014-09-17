@@ -30,16 +30,16 @@ angular.module("menuModule")
           return rests;
         };
 
-        // var singleRest = function(id) {
-        //    return $http.get(rests + "/" + id);
+        // // var singleRest = function(id) {
+        // //    return $http.get(rests + "/" + id);
+        // // };
+        //
+        // var createRest = function(rest) {
+        //   return $http.post(rests, rest).then(function (response) {
+        //         $rootScope.$broadcast("rest:added");
+        //         $log.info("rest:added");
+        //     })
         // };
-
-        var createRest = function(rest) {
-          return $http.post(rests, rest).then(function (response) {
-                $rootScope.$broadcast("rest:added");
-                $log.info("rest:added");
-            })
-        };
 
         var deleteRest = function(rest) {
           return $http.delete(rests + "/" + rest._id, rest).then(function (response) {
@@ -56,16 +56,17 @@ angular.module("menuModule")
             })
         };
 
+////////CRUD FOR MENUS
 
-        var menus = "/menus.json";
+        var menus = "/menus";
 
         var getMenus = function(){
           return $http.get(menus);
         };
 
-        var singleMenu = function(id) {
-           return $http.get(menus + "/" + id);
-        };
+        // var singleMenu = function(id) {
+        //    return $http.get(menus + "/" + id);
+        // };
 
         var createMenu = function(menu) {
           $http.post(menus, menu).then(function (response) {
@@ -75,7 +76,7 @@ angular.module("menuModule")
         };
 
         var deleteMenu = function(menu) {
-          $http.delete("/" + menus + "/" + id, menu).then(function (response) {
+          return $http.delete(menus + "/" + menu.id, menu).then(function (response) {
                 console.log(response);
                 $rootScope.$broadcast("menu:deleted");
                 $log.info("menu:deleted");
@@ -83,60 +84,60 @@ angular.module("menuModule")
         };
 
         var editMenu = function(menu) {
-          return $http.put(menus + "/" + menu._id, menu).then(function (response) {
+          return $http.put(menus + "/" + menu.id, menu).then(function (response) {
                 $rootScope.$broadcast("menu:updated");
                 $log.info("menu:updated");
             })
         };
-
-// CRUD FOR MENU ITEMS
-
-        var items = "/menus/:menu_id/items.json";
-
-        var getItems = function(){
-          return $http.get(items);
-        };
-
-        var singleItem = function(id) {
-           return $http.get(items + "/" + id);
-        };
-
-        var createItem = function(item) {
-          return $http.post(items, item).then(function (response) {
-                $rootScope.$broadcast("item:added");
-                $log.info("item:added");
-            })
-        };
-
-        var deleteItem = function(item) {
-          return $http.delete(items + "/" + item._id, item).then(function (response) {
-                console.log(response);
-                $rootScope.$broadcast("item:deleted");
-                $log.info("item:deleted");
-            })
-        };
-
-        var editItem = function(item) {
-          return $http.put(items + "/" + item._id, item).then(function (response) {
-                $rootScope.$broadcast("item:updated");
-                $log.info("item:updated");
-            })
-        };
+//
+// // CRUD FOR MENU ITEMS
+//
+//         var items = "/menus/:menu_id/items";
+//
+//         var getItems = function(){
+//           return $http.get(items);
+//         };
+//
+//         var singleItem = function(id) {
+//            return $http.get(items + "/" + id);
+//         };
+//
+//         var createItem = function(item) {
+//           return $http.post(items, item).then(function (response) {
+//                 $rootScope.$broadcast("item:added");
+//                 $log.info("item:added");
+//             })
+//         };
+//
+//         var deleteItem = function(item) {
+//           return $http.delete(items + "/" + item._id, item).then(function (response) {
+//                 console.log(response);
+//                 $rootScope.$broadcast("item:deleted");
+//                 $log.info("item:deleted");
+//             })
+//         };
+//
+//         var editItem = function(item) {
+//           return $http.put(items + "/" + item._id, item).then(function (response) {
+//                 $rootScope.$broadcast("item:updated");
+//                 $log.info("item:updated");
+//             })
+//         };
 
         return {
 
-          getRests: getRests,
+          // getRests: getRests,
           // Menus
           getMenus: getMenus,
-          singleMenu: singleMenu,
+          // singleMenu: singleMenu,
           addMenu: createMenu,
           deleteMenu: deleteMenu,
           editMenu: editMenu,
-          // Menu Items
-          getItems: getItems,
-          singleItem: singleItem,
-          addItem: createItem,
-          deleteItem: deleteItem,
-          editItem: editItem,
+          // // Menu Items
+          // getItems: getItems,
+          // singleItem: singleItem,
+          // addItem: createItem,
+          // deleteItem: deleteItem,
+          // editItem: editItem,
         };
     });
