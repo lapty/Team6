@@ -1,4 +1,3 @@
-
 var restaurantgroup = angular.module("menuModule",["ngRoute"])
 
   .config(function ($routeProvider) {
