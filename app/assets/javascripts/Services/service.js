@@ -57,8 +57,6 @@ angular.module("menuModule")
         };
 
 
-// CRUD FOR MENUS
-
         var menus = "/menus.json";
 
         var getMenus = function(){
