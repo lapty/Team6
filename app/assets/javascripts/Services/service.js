@@ -2,33 +2,33 @@ angular.module("menuModule")
     .factory("menuSvc", function ( $rootScope, $log, $http) {
 
 // CRUD FOR RESTAURANTS
-
-        var rests = [
-        {
-            title: "Monza",
-            link: "monza",
-            image: "http://www.travelandleisure.com/sites/default/files/styles/image_300x300/public/field/image/local-experts-charleston-best-budget-restaurants.jpg?itok=HVZSEP8d"
-        },
-        {
-            title: "Poes",
-            link: "poes",
-            image: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS9GMq6ZY2T_T0VUJuZjGIV-RDTszl3dTLbtngiaJPSl8nGNnXJ"
-        },
-        {
-            title: "Closed for Business",
-            link: "cfb",
-            image: "https://s3.amazonaws.com/ah.cms/images/P1040351.jpg"
-        },
-            {
-            title: "Tacoboy",
-            link: "tacoboy",
-            image: "http://www.tacoboy.net/images/lrg_blockImageContact001.jpg"
-            }
-        ];
-
-        var getRests = function(){
-          return rests;
-        };
+        //
+        // var rests = [
+        // {
+        //     title: "Monza",
+        //     link: "monza",
+        //     image: "http://www.travelandleisure.com/sites/default/files/styles/image_300x300/public/field/image/local-experts-charleston-best-budget-restaurants.jpg?itok=HVZSEP8d"
+        // },
+        // {
+        //     title: "Poes",
+        //     link: "poes",
+        //     image: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS9GMq6ZY2T_T0VUJuZjGIV-RDTszl3dTLbtngiaJPSl8nGNnXJ"
+        // },
+        // {
+        //     title: "Closed for Business",
+        //     link: "cfb",
+        //     image: "https://s3.amazonaws.com/ah.cms/images/P1040351.jpg"
+        // },
+        //     {
+        //     title: "Tacoboy",
+        //     link: "tacoboy",
+        //     image: "http://www.tacoboy.net/images/lrg_blockImageContact001.jpg"
+        //     }
+        // ];
+        //
+        // var getRests = function(){
+        //   return rests;
+        // };
 
 ////////CRUD FOR MENUS
 
@@ -99,7 +99,7 @@ angular.module("menuModule")
 //         };
 
         return {
-          getRests: getRests,
+          // getRests: getRests,
           // Menus
           getMenus: getMenus,
           // singleMenu: singleMenu,
