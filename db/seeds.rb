@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+menus = Menu.create([
+  {menu_name: 'Poes Menu', menu_section_name: ''}
+  ])

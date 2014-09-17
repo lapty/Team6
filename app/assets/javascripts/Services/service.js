@@ -1,7 +1,6 @@
 angular.module("menuModule")
     .factory("menuSvc", function ( $rootScope, $log, $http) {
 
-<<<<<<< HEAD
 // CRUD FOR RESTAURANTS
 
         var rests = [
@@ -57,8 +56,6 @@ angular.module("menuModule")
             })
         };
 
-=======
->>>>>>> 7e8b24218eee077f57c6a6c4ebb239c966bdb681
 // CRUD FOR MENUS
 
         var menus = "/menus.json";
