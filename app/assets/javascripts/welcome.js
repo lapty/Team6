@@ -9,7 +9,7 @@ angular.module("menuModule",["ngRoute"])
         })
 
         .when("/admin", {
-            templateUrl: "../assets/admin/restList.html.erb",
+            templateUrl: "../assets/admin/main.html.erb",
             controller: "menuCtrl"
         })
 

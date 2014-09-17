@@ -1,8 +1,6 @@
 angular.module("menuModule")
     .controller("menuCtrl", function ($scope, $rootScope, $location, $routeParams, $log, menuSvc) {
 
-// CRUD FOR MENU
-
         menuSvc.getMenus().then(function (menus) {
            $log.info(menus);
             $scope.menus = menus.data;
