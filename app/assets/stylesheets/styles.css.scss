@@ -49,6 +49,8 @@ $test: 1px red solid;
 .restWrap {
     width:100%;
     padding:0px;
+    position:fixed;
+    bottom:-250px;
     /* border:\$test; */
     background-color:rgba(255,255,255,1);
     overflow-y:auto;
@@ -102,7 +104,7 @@ $test: 1px red solid;
 .scroller.active {
     /* position:fixed; */
     top:200px;
-    transform: translateY(-630px);
+    transform: translateY(-650px);
 }
 
 .scroller2 {
@@ -111,5 +113,5 @@ $test: 1px red solid;
 
 .scroller2.active {
     /* position:fixed; */
-    top:90px;
+    top:450px;
 }
