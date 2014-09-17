@@ -3,6 +3,8 @@ angular.module("menuModule")
 
 //  CRUD FOR RESTAURANTS
 
+    $scope.work = "FINALLY WORKS WOOOOO"
+
        menuSvc.getRests().then(function (rests) {
           $log.info(rests);
            $scope.rests = rests.data;
