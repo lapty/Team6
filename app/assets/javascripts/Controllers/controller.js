@@ -8,13 +8,13 @@ angular.module("menuModule")
     //    menuSvc.getRests().then(function (rests) {
     //       $log.info(rests);
     //        $scope.rests = rests.data;
-       //
+    //
     //     });
 
-        menuSvc.singleRest($routeParams.id).then(function (response) {
-            $scope.singleRest = response.data;
-
-        });
+        // menuSvc.singleRest($routeParams.id).then(function (response) {
+        //     $scope.singleRest = response.data;
+        //
+        // });
 
         $scope.addRest = function (rest) {
             menuSvc.createRest(rest).then(function () {
