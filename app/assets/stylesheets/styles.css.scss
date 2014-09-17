@@ -6,7 +6,7 @@ $test: 1px red solid;
 .body {
     margin:0px;
     padding:0px;
-    height:700px;
+    height:100%;
     font-family:helvetica;
 
 
@@ -51,7 +51,6 @@ $test: 1px red solid;
 .restWrap {
     width:100%;
     padding:0px;
-    height:500px;
     border:\\$test;
     background-color:rgba(255,255,255,1);
     overflow-y:auto;
