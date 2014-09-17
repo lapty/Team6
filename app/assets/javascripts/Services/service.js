@@ -73,22 +73,22 @@ angular.module("menuModule")
 
         var items = "______";
 
-        var getMenus = function(){
+        var getItems = function(){
           return $http.get(items);
         };
 
-        var singleMenu = function(id) {
+        var singleItem = function(id) {
            return $http.get(items + "/" + id);
         };
 
-        var createMenu = function(item) {
+        var createItem = function(item) {
           return $http.post(items, item).then(function (response) {
                 $rootScope.$broadcast("item:added");
                 $log.info("item:added");
             })
         };
 
-        var deleteMenu = function(item) {
+        var deleteItem = function(item) {
           return $http.delete(items + "/" + item._id, item).then(function (response) {
                 console.log(response);
                 $rootScope.$broadcast("item:deleted");
@@ -96,7 +96,7 @@ angular.module("menuModule")
             })
         };
 
-        var editMenu = function(item) {
+        var editItem = function(item) {
           return $http.put(items + "/" + item._id, item).then(function (response) {
                 $rootScope.$broadcast("item:updated");
                 $log.info("item:updated");
