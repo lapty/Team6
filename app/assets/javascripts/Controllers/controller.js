@@ -1,19 +1,13 @@
 angular.module("menuModule")
-    .controller("menuCtrl", function ($scope, $rootScope, $location, $routeParams, $log, menuSvc) {
+    .controller("menuCtrl", function ($scope, $route, $rootScope, $location, $routeParams, $log, menuSvc) {
 
-//  CRUD FOR RESTAURANTS
+ // CRUD FOR RESTAURANTS
 
-        // $scope.rests = menuSvc.getRests();
-
-      //  menuSvc.getRests().then(function (rests) {
+      //   $scope.rests = menuSvc.getRests();
+       //
+      //  menuSvc.getRests().then(function(rests) {
       //     $log.info(rests);
       //      $scope.rests = rests.data;
-       //
-      //   });
-       //
-      //   menuSvc.singleRest($routeParams.id).then(function (response) {
-      //       $scope.singleRest = response.data;
-       //
       //   });
 
 // CRUD FOR MENU
@@ -81,4 +75,24 @@ angular.module("menuModule")
 //          $scope.deleteItem = function (id) {
 //              menuSvc.deleteItem(id);
 //          };
+
+
+    $rootScope.$on("menu:deleted", function () {
+      menuSvc.getMenus().then(function (menus) {
+        $scope.menus = menus.data;
+        $route.reload();
+      });
+  });
+
+    $rootScope.$on("menu:added", function () {
+      menuSvc.getMenus().then(function (menus) {
+        $scope.menus = menus.data;
+      });
+  });
+
+    $rootScope.$on("item:added", function () {
+      menuSvc.getMsgs().then(function (items) {
+        $scope.msgs = msgs.data.reverse();
+    });
+  });
 });
