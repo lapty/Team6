@@ -4,7 +4,7 @@ class RestaurantsController < ApplicationController
   def index
     @restaurants = Restaurant.all
     respond_to do |format|
-      format.json { render json: @restaurant.as_json }
+      format.json { render json: @restaurants.as_json }
   end
 
   def show
@@ -26,7 +26,6 @@ class RestaurantsController < ApplicationController
 
   def update
     @restaurant.update_attributes restaurant_params
-    redirect_to restaurants_path(@restaurant)
     respond_to do |format|
       format.json { render json: @restaurant.as_json }
     end
@@ -34,7 +33,6 @@ class RestaurantsController < ApplicationController
 
   def destroy
     @restaurant.delete
-    redirect_to restaurants_path(@restaurants)
     respond_to do |format|
       format.json { render json: @restaurant.as_json }
     end
