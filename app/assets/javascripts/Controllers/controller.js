@@ -40,7 +40,6 @@ angular.module("menuModule")
         menuSvc.getMenus().then(function (menus) {
            $log.info(menus);
             $scope.menus = menus.data;
-
          });
 
          menuSvc.singleMenu($routeParams.id).then(function (response) {
@@ -48,23 +47,24 @@ angular.module("menuModule")
          });
 
          $scope.addMenu = function (menu) {
-             menuSvc.createMenu(menu);
+             menuSvc.addMenu(menu);
+             $location.path("/admin/tacoboy");
          };
 
          $scope.goToMonza = function () {
-           $location.path("#/admin/monza")
+           $location.path("/admin/monza")
          };
 
          $scope.goToPoes = function () {
-           $location.path("#/admin/poes")
+           $location.path("/admin/poes")
          };
 
          $scope.goToTacoBoy = function () {
-           $location.path("#/admin/tacoboy")
+           $location.path("/admin/tacoboy")
          };
 
          $scope.goToCfb = function () {
-           $location.path("#/admin/cfb")
+           $location.path("/admin/cfb")
          };
 
          $scope.editMenu = function (menu) {
