@@ -3,13 +3,13 @@ angular.module("menuModule")
 
 //  CRUD FOR RESTAURANTS
 
-    $scope.work = "FINALLY WORKS WOOOOO"
+        $scope.rests = menuSvc.getRests();
 
-       menuSvc.getRests().then(function (rests) {
-          $log.info(rests);
-           $scope.rests = rests.data;
-
-        });
+    //    menuSvc.getRests().then(function (rests) {
+    //       $log.info(rests);
+    //        $scope.rests = rests.data;
+       //
+    //     });
 
         menuSvc.singleRest($routeParams.id).then(function (response) {
             $scope.singleRest = response.data;
