@@ -1,10 +1,10 @@
-var restaurantgroup = angular.module("menuModule",["ngRoute"])
+angular.module("menuModule",["ngRoute"])
 
   .config(function ($routeProvider) {
 
     $routeProvider
         .when("/", {
-            templateUrl: "../assets/restList.html.erb",
+            templateUrl: "../assets/user/main.html.erb",
             controller: "menuCtrl"
         })
 
