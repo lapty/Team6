@@ -1,6 +1,64 @@
 angular.module("menuModule")
     .factory("menuSvc", function ( $rootScope, $log, $http) {
 
+<<<<<<< HEAD
+// CRUD FOR RESTAURANTS
+
+        var rests = [
+        {
+            title: "Monza",
+            link: "monza",
+            image: "http://www.travelandleisure.com/sites/default/files/styles/image_300x300/public/field/image/local-experts-charleston-best-budget-restaurants.jpg?itok=HVZSEP8d"
+        },
+        {
+            title: "Poes",
+            link: "poes",
+            image: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS9GMq6ZY2T_T0VUJuZjGIV-RDTszl3dTLbtngiaJPSl8nGNnXJ"
+        },
+        {
+            title: "Closed for Business",
+            link: "cfb",
+            image: "https://s3.amazonaws.com/ah.cms/images/P1040351.jpg"
+        },
+            {
+            title: "Tacoboy",
+            link: "tacoboy",
+            image: "http://www.tacoboy.net/images/lrg_blockImageContact001.jpg"
+            }
+        ];
+
+        var getRests = function(){
+          return rests;
+        };
+
+        var singleRest = function(id) {
+           return $http.get(rests + "/" + id);
+        };
+
+        var createRest = function(rest) {
+          return $http.post(rests, rest).then(function (response) {
+                $rootScope.$broadcast("rest:added");
+                $log.info("rest:added");
+            })
+        };
+
+        var deleteRest = function(rest) {
+          return $http.delete(rests + "/" + rest._id, rest).then(function (response) {
+                console.log(response);
+                $rootScope.$broadcast("rest:deleted");
+                $log.info("rest:deleted");
+            })
+        };
+
+        var editRest = function(rest) {
+          return $http.put(rests + "/" + rest._id, rest).then(function (response) {
+                $rootScope.$broadcast("rest:updated");
+                $log.info("rest:updated");
+            })
+        };
+
+=======
+>>>>>>> 7e8b24218eee077f57c6a6c4ebb239c966bdb681
 // CRUD FOR MENUS
 
         var menus = "/menus.json";
