@@ -30,32 +30,6 @@ angular.module("menuModule")
           return rests;
         };
 
-        // // var singleRest = function(id) {
-        // //    return $http.get(rests + "/" + id);
-        // // };
-        //
-        // var createRest = function(rest) {
-        //   return $http.post(rests, rest).then(function (response) {
-        //         $rootScope.$broadcast("rest:added");
-        //         $log.info("rest:added");
-        //     })
-        // };
-
-        var deleteRest = function(rest) {
-          return $http.delete(rests + "/" + rest._id, rest).then(function (response) {
-                console.log(response);
-                $rootScope.$broadcast("rest:deleted");
-                $log.info("rest:deleted");
-            })
-        };
-
-        var editRest = function(rest) {
-          return $http.put(rests + "/" + rest._id, rest).then(function (response) {
-                $rootScope.$broadcast("rest:updated");
-                $log.info("rest:updated");
-            })
-        };
-
 ////////CRUD FOR MENUS
 
         var menus = "/menus";
@@ -125,14 +99,13 @@ angular.module("menuModule")
 //         };
 
         return {
-
-          // getRests: getRests,
+          getRests: getRests,
           // Menus
           getMenus: getMenus,
           // singleMenu: singleMenu,
           addMenu: createMenu,
           deleteMenu: deleteMenu,
-          editMenu: editMenu,
+          editMenu: editMenu
           // // Menu Items
           // getItems: getItems,
           // singleItem: singleItem,
