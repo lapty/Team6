@@ -1,40 +1,6 @@
 angular.module("menuModule")
     .factory("menuSvc", function ( $rootScope, $log, $http) {
 
-// CRUD FOR RESTAURANTS
-
-        var rests = "______";
-
-        var getRests = function(){
-          return $http.get(rests);
-        };
-
-        var singleRest = function(id) {
-           return $http.get(rests + "/" + id);
-        };
-
-        var createRest = function(rest) {
-          return $http.post(rests, rest).then(function (response) {
-                $rootScope.$broadcast("rest:added");
-                $log.info("rest:added");
-            })
-        };
-
-        var deleteRest = function(rest) {
-          return $http.delete(rests + "/" + rest._id, rest).then(function (response) {
-                console.log(response);
-                $rootScope.$broadcast("rest:deleted");
-                $log.info("rest:deleted");
-            })
-        };
-
-        var editRest = function(rest) {
-          return $http.put(rests + "/" + rest._id, rest).then(function (response) {
-                $rootScope.$broadcast("rest:updated");
-                $log.info("rest:updated");
-            })
-        };
-
 // CRUD FOR MENUS
 
         var menus = "______";
@@ -103,13 +69,7 @@ angular.module("menuModule")
             })
         };
 
-        return {
-          // Restaurants
-          getRests: getRests,
-          singleRest: singleRest,
-          addRest: createRest,
-          deleteRest: deleteRest,
-          editRest: editRest,
+        return {s
           // Menus
           getMenus: getMenus,
           singleMenu: singleMenu,
