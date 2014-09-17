@@ -1,7 +1,7 @@
 angular.module("menuModule")
     .factory("menuSvc", function ( $rootScope, $log, $http) {
 
-########### CRUD FOR RESTAURANTS
+// CRUD FOR RESTAURANTS
 
         var rests = "______";
 
@@ -35,7 +35,7 @@ angular.module("menuModule")
             })
         };
 
-############## CRUD FOR MENUS
+// CRUD FOR MENUS
 
         var menus = "______";
 
@@ -69,7 +69,7 @@ angular.module("menuModule")
             })
         };
 
-################ CRUD FOR MENU ITEMS
+// CRUD FOR MENU ITEMS
 
         var items = "______";
 
@@ -104,19 +104,19 @@ angular.module("menuModule")
         };
 
         return {
-          # Restaurants
+          // Restaurants
           getRests: getRests,
           singleRest: singleRest,
           addRest: createRest,
           deleteRest: deleteRest,
           editRest: editRest,
-          # Menus
+          // Menus
           getMenus: getMenus,
           singleMenu: singleMenu,
           addMenu: createMenu,
           deleteMenu: deleteMenu,
           editMenu: editMenu,
-          #Menu Items
+          // Menu Items
           getItems: getItems,
           singleItem: singleItem,
           addItem: createItem,

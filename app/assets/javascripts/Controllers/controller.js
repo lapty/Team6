@@ -1,7 +1,7 @@
 angular.module("menuModule")
     .controller("menuCtrl", function ($scope, $rootScope, $location, $routeParams, $log, menuSvc) {
 
-############## CRUD FOR RESTAURANTS
+//  CRUD FOR RESTAURANTS
 
        menuSvc.getRests().then(function (rests) {
           $log.info(rests);
@@ -33,7 +33,7 @@ angular.module("menuModule")
             });
         };
 
-############### CRUD FOR MENU
+// CRUD FOR MENU
 
         menuSvc.getMenus().then(function (menus) {
            $log.info(menus);
@@ -66,7 +66,7 @@ angular.module("menuModule")
          };
 
 
-############### CRUD FOR MENU ITEMS
+// CRUD FOR MENU ITEMS
 
         menuSvc.getItems().then(function (items) {
            $log.info(items);
