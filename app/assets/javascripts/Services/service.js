@@ -14,14 +14,14 @@ angular.module("menuModule")
         };
 
         var createMenu = function(menu) {
-          return $http.post(menus, menu).then(function (response) {
+          $http.post(menus, menu).then(function (response) {
                 $rootScope.$broadcast("menu:added");
                 $log.info("menu:added");
             })
         };
 
         var deleteMenu = function(menu) {
-          return $http.delete(menus + "/" + menu._id, menu).then(function (response) {
+          $http.delete("/" + menus + "/" + id, menu).then(function (response) {
                 console.log(response);
                 $rootScope.$broadcast("menu:deleted");
                 $log.info("menu:deleted");

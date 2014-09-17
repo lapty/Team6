@@ -1,8 +1,7 @@
 <a href="#/admin/tacoboy/new">Add Menu</a>
 <div id="name">
   <div class="menuList" ng-repeat="menu in menus">
-    <p>
-      {{menu.title}}
-    </p>
+    <p><a>{{menu.menu_name}}</a></p>
+    <button ng-click="deleteMenu(menu)" class="btn">Delete</button>
   </div>
 </div>
