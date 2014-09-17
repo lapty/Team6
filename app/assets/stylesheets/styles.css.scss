@@ -49,10 +49,10 @@ $test: 1px red solid;
 .restWrap {
     width:100%;
     padding:0px;
-    position:fixed;
-    bottom:-250px;
+    /* position:fixed; */
+/*     bottom:-250px; */
+    background-color:rgba(0,0,0,.5);
     /* border:\$test; */
-    background-color:rgba(255,255,255,1);
     overflow-y:auto;
 
 }
@@ -85,6 +85,11 @@ $test: 1px red solid;
     text-align:center;
     border:none;
     background-color:rgba(0,0,0,.9);
+}
+
+#row {
+  display: block;
+  margin-top: 2000px;
 }
 
 .scroller {
