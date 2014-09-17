@@ -1,8 +1,15 @@
 $test: 1px red solid;
 
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 .body {
     margin:0px;
     padding:0px;
+    height:700px;
+    font-family:helvetica;
+
+
 }
 
 .welcomeWrap {
@@ -10,9 +17,14 @@ $test: 1px red solid;
     height:700px;
     border:1px red solid;
     text-align:center;
+    background-image:url("bg2.gif");
+    background-size:cover;
+    text-shadow: black 0 2px 3px;
     h2 {
         position:absolute;
-        top:220px;
+        color:rgba(255,255,255,.9);
+        font-family: 'Merriweather', serif; font-style:italic;
+        top:275px;
         width:100%;
         font-size:5em;
         text-align:center;
@@ -20,21 +32,88 @@ $test: 1px red solid;
     }
     span {
         width:100%;
+        font-size:4.5em;
         position: relative;
         top:550px;
+        color:rgba(255,255,255,.9);
         text-align:center;
+        transition:all .3s ease;
         border:$test;
     }
+    span:hover {
+        color:rgba(255,255,255,1);
+        transform: translateY(-5px);
+    }
+
 }
+
 
 .restWrap {
     width:100%;
-    height:1000px;
-    border:$test;
-    background-color:rgba(0,255,0,.5);
+    padding:0px;
+    height:500px;
+    border:\\$test;
+    background-color:rgba(255,255,255,1);
+    overflow-y:auto;
 
 }
 
 .restBlock {
     border:1px blue solid;
+    height:250px;
+    padding:0px;
+    background-image:url("http://lorempixel.com//250/250");
+    background-size:cover;
+    text-align:center;
+    span {
+        position:relative;
+        font-size:2em;
+        color:white;
+        top:90px;
+
+    }
+}
+
+.notice, .alert {
+    position:fixed;
+    top:0;
+}
+
+.search {
+    width:100%;
+    height:50px;
+    font-size:1.2em;
+    color:white;
+    text-align:center;
+    border:none;
+    background-color:rgba(0,0,0,.8);
+}
+
+.scroller {
+    transition:2s ease;
+}
+
+.sticky.active {
+    position:fixed;
+    top:0;
+    z-index:3
+}
+
+.scroller {
+    transition:1s ease-in-out;
+}
+
+.scroller.active {
+    /* position:fixed; */
+    top:200px;
+    transform: translateY(-630px);
+}
+
+.scroller2 {
+    transition:1s ease-in-out;
+}
+
+.scroller2.active {
+    /* position:fixed; */
+    top:90px;
 }
