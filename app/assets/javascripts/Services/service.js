@@ -30,9 +30,9 @@ angular.module("menuModule")
           return rests;
         };
 
-        var singleRest = function(id) {
-           return $http.get(rests + "/" + id);
-        };
+        // var singleRest = function(id) {
+        //    return $http.get(rests + "/" + id);
+        // };
 
         var createRest = function(rest) {
           return $http.post(rests, rest).then(function (response) {
@@ -56,7 +56,6 @@ angular.module("menuModule")
             })
         };
 
-// CRUD FOR MENUS
 
         var menus = "/menus.json";
 
@@ -125,6 +124,8 @@ angular.module("menuModule")
         };
 
         return {
+
+          getRests: getRests,
           // Menus
           getMenus: getMenus,
           singleMenu: singleMenu,
