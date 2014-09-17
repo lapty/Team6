@@ -61,7 +61,7 @@ angular.module("menuModule")
 >>>>>>> 7e8b24218eee077f57c6a6c4ebb239c966bdb681
 // CRUD FOR MENUS
 
-        var menus = "______";
+        var menus = "/menus.json";
 
         var getMenus = function(){
           return $http.get(menus);
@@ -95,7 +95,7 @@ angular.module("menuModule")
 
 // CRUD FOR MENU ITEMS
 
-        var items = "______";
+        var items = "/menus/:menu_id/items.json";
 
         var getItems = function(){
           return $http.get(items);
@@ -127,7 +127,7 @@ angular.module("menuModule")
             })
         };
 
-        return {s
+        return {
           // Menus
           getMenus: getMenus,
           singleMenu: singleMenu,
