@@ -1,7 +1,6 @@
 angular.module("menuModule")
     .factory("menuSvc", function ( $rootScope, $log, $http) {
 
-// CRUD FOR RESTAURANTS
         var rests = [
         {
 
