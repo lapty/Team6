@@ -1,14 +1,14 @@
 angular.module("menuModule")
-    .controller("menuCtrl", function ($scope, $route, $rootScope, $location, $routeParams, $log, menuSvc) {
+    .controller("menuCtrl", function ($scope, $route,  $rootScope, $location, $routeParams, $log, menuSvc) {
 
  // CRUD FOR RESTAURANTS
 
-      //   $scope.rests = menuSvc.getRests();
-       //
-      //  menuSvc.getRests().then(function(rests) {
-      //     $log.info(rests);
-      //      $scope.rests = rests.data;
-      //   });
+        $scope.rests = menuSvc.getRests();
+
+       menuSvc.getRests().then(function(rests) {
+          $log.info(rests);
+           $scope.rests = rests.data;
+        });
 
 // CRUD FOR MENU
 
