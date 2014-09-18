@@ -126,7 +126,7 @@ angular.module("menuModule")
 
         return {
 
-          // getRests: getRests,
+          getRests: getRests,
           // Menus
           getMenus: getMenus,
           // singleMenu: singleMenu,
