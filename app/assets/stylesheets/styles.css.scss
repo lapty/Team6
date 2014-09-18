@@ -10,6 +10,11 @@ padding:0px; */
     font-family:helvetica;
 }
 
+nav {
+    color:white;
+}
+
+
 .welcomeWrap {
     width:100%;
     height:700px;
@@ -83,6 +88,7 @@ padding:0px; */
 .notice, .alert {
     position:fixed;
     top:0;
+    right:0;
 }
 
 .search {
@@ -169,7 +175,7 @@ padding:0px; */
    background-color: rgba(0,0,0,.2);
 }
 
-/////////
+/////////admin
 
 .admin {
     .menuWrap {
@@ -186,4 +192,36 @@ padding:0px; */
     p {
         color:white;
     }
+}
+
+//////devise
+
+.devForm {
+    color:white;
+    position:absolute;
+    width:100%;
+    top:250px;
+
+    h2 {
+        top:-120px;
+    }
+
+    .button {
+        color:red;
+    }
+
+    input {
+        color:white;
+        border-radius: 12px;
+        background-color:rgba(0,0,0,.5);
+        border:4px white solid;
+    }
+
+
+}
+
+.goUp {
+    position:fixed;
+    top:0;
+    font-size:1em;
 }
