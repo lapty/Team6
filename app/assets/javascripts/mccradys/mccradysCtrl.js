@@ -1,53 +1,11 @@
 angular.module("menuModule")
 
-    .controller("menuCtrl", function ($scope, $route, $rootScope, $location, $routeParams, $anchorScroll, $log, menuSvc) {
- // CRUD FOR RESTAURANTS
-
-        $scope.rests = menuSvc.getRests();
-
-        ///SCROLLING DOWN
-        $(function() {
-        $(".welcomeWrap").on("click", "#scrollButt", function() {
-        $('html, body').animate({
-          scrollTop: $("#scroll").offset().top }, 750);  });
-        });
-
-
-       menuSvc.getRests().then(function (rests) {
-          $log.info(rests);
-           $scope.rests = rests.data;
-
-        });
-
-        menuSvc.singleRest($routeParams.id).then(function (response) {
-            $scope.singleRest = response.data;
-
-        });
-
-        $scope.addRest = function (rest) {
-            menuSvc.createRest(rest).then(function () {
-                $location.path("/admin");
-            });
-
-        };
-
-        $scope.editRest = function (rest) {
-            menuSvc.editRest(rest).then(function () {
-                $location.path("/admin");
-            });
-        };
-
-        $scope.deleteRest = function (id) {
-            menuSvc.deleteRest(id).then(function () {
-                $location.path("/admin");
-            });
-        };
-
+    .controller("mccradysCtrl", function ($scope, $route, $rootScope, $location, $routeParams, $anchorScroll, $log, mccradysSvc) {
 // CRUD FOR MENU
 
-        menuSvc.getMenus().then(function (menus) {
-           $log.info(menus);
-            $scope.menus = menus.data;
+        menuSvc.getMenus().then(function (mccradysMenus) {
+           $log.info(mccradysMenus);
+            $scope.mccradysMenus = mccradysMenus.data;
          });
 
         //  menuSvc.singleMenu($routeParams.id).then(function (response) {
@@ -111,15 +69,15 @@ angular.module("menuModule")
 
 
     $rootScope.$on("menu:deleted", function () {
-      menuSvc.getMenus().then(function (menus) {
-        $scope.menus = menus.data;
+      menuSvc.getMenus().then(function (mccradysMenus) {
+        $scope.mccradysMenus = mccradysMenus.data;
         $route.reload();
       });
   });
 
     $rootScope.$on("menu:added", function () {
-      menuSvc.getMenus().then(function (menus) {
-        $scope.menus = menus.data;
+      menuSvc.getMenus().then(function (mccradysMenus) {
+        $scope.mccradysMenus = mccradysMenus.data;
       });
   });
 
