@@ -27,7 +27,7 @@ class ItemsController < ApplicationController
   end
 
   def update
-    @menu.item.update_attributes item_params
+    @item.update_attributes item_params
     respond_to do |format|
       format.json { render json: @item.as_json }
     end
