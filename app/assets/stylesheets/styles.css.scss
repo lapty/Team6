@@ -3,17 +3,17 @@ $test: 1px red solid;
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-.body {
+body {
     margin:0px;
     padding:0px;
     height:100%;
+    background-color:black;
     font-family:helvetica;
 }
 
 .welcomeWrap {
     width:100%;
     height:700px;
-    /* border:1px red solid; */
     text-align:center;
     background-image:url("bg2.gif");
     background-size:cover;
@@ -96,33 +96,53 @@ $test: 1px red solid;
     background-color:rgba(0,0,0,.9);
 }
 
+/////////HUSK
 
-/* .scroller {
-    transition:2s ease;
-}
- */
-/* .sticky.active {
+.huskWrap {
+    width:100%;
     position:fixed;
-    top:0;
-    z-index:3
-} */
+    height:700px;
+    text-align:center;
+    background-image:url("http://tomostyle.files.wordpress.com/2011/08/img_12761.jpg");
+    background-size:100% 100%;
+    text-shadow: black 0 2px 3px;
 
-/* .scroller {
-    transition:1s ease-in-out;
+    }
+
+.info {
+/*     width:50%; */
+    border:$test;
+    margin-left:auto;
+    margin-right:auto;
+    background-image:rgba(255,255,255,.5);
+
+    h1 {
+        font-size:6em;
+        color:rgba(255,255,255,.9);
+        font-family: 'Open Sans', sans-serif;
+        font-weight:bolder;
+        text-shadow: black 0 2px 3px;
+    }
+
+    h4 {
+        color:rgba(255,255,255,.9);
+        font-family: 'Open Sans', sans-serif;
+        text-shadow: black 0 2px 3px;
+        margin:2px;
+        a {
+            color:rgba(255,255,255,.9);
+        }
+    }
 }
 
-.scroller.active { */
-    /* position:fixed; */
-/*     top:200px;
-transform: translateX(1000px); */
-/* } */
-/*
-.scroller2 {
-    transition:1s ease-in-out;
+.menu {
+    width:70%;
+    border:$test;
+    margin-top:30px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:rgba(255,255,255,.4);
+    color:black;
+    text-shadow:none;
+    font-size: 1.2em;
 }
-
-.scroller2.active {
-    position:fixed;
-    top:450px; */
-/* }
- */
