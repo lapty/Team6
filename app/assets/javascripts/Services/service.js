@@ -116,17 +116,16 @@ angular.module("menuModule")
 
         return {
           getRests: getRests,
-          // Menus
-        //   getMenus: getMenus,
-        //   // singleMenu: singleMenu,
-        //   addMenu: createMenu,
-        //   deleteMenu: deleteMenu,
-        //   editMenu: editMenu
-          // // Menu Items
+
+          ///items1
           getItems: getItems,
-        //   singleItem: singleItem,
           addItem: createItem,
           deleteItem: deleteItem,
           editItem: editItem,
+          //items2
+
+          //items3
+
+          //items4
         };
     });
