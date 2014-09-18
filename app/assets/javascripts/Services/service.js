@@ -12,14 +12,7 @@ angular.module("menuModule")
             site:  "huskrestaurant.com",
 
         },
-        {
-            title: "MCCRADY'S",
-            link: "2",
-            image: "http://4.bp.blogspot.com/-6G8epA5qts0/T_zYoo0JFII/AAAAAAAAAUs/MJ7aOFVMovo/s1600/McCrady%2527s+Restaurant+Charleston+SC+Jason+Frye+Food+Writer.JPG",
-            phone: "(843) 577-0025",
-            address: "2 Unity Alley, Charleston, SC 29401",
-            site: "http://mccradysrestaurant.com/",
-        },
+
         {
             title: "CHICAGO'S",
             link: "3",
@@ -28,6 +21,15 @@ angular.module("menuModule")
             address: "4401 Shallowford Rd NE, Roswell, GA 30075",
             site: "http://www.chicagosrestaurant.com/",
 
+        },
+
+        {
+            title: "MCCRADY'S",
+            link: "2",
+            image: "http://4.bp.blogspot.com/-6G8epA5qts0/T_zYoo0JFII/AAAAAAAAAUs/MJ7aOFVMovo/s1600/McCrady%2527s+Restaurant+Charleston+SC+Jason+Frye+Food+Writer.JPG",
+            phone: "(843) 577-0025",
+            address: "2 Unity Alley, Charleston, SC 29401",
+            site: "http://mccradysrestaurant.com/",
         },
             {
             title: "MINERO",
@@ -44,7 +46,7 @@ angular.module("menuModule")
           return rests;
         };
 
-        var menus = "/menus";
+        var menus1 = "/menus/1/items";
 
         var getMenus = function(){
           return $http.get(menus);
@@ -73,39 +75,39 @@ angular.module("menuModule")
         };
 
 
-// CRUD FOR MENU ITEMS
-
-        var items = "/menus/:menu_id/items";
-
-        var getItems = function(){
-          return $http.get(items);
-        };
-
-        var singleItem = function(id) {
-           return $http.get(items + "/" + id);
-        };
-
-        var createItem = function(item) {
-          return $http.post(items, item).then(function (response) {
-                $rootScope.$broadcast("item:added");
-                $log.info("item:added");
-            })
-        };
-
-        var deleteItem = function(item) {
-          return $http.delete(items + "/" + item._id, item).then(function (response) {
-                console.log(response);
-                $rootScope.$broadcast("item:deleted");
-                $log.info("item:deleted");
-            })
-        };
-
-        var editItem = function(item) {
-          return $http.put(items + "/" + item._id, item).then(function (response) {
-                $rootScope.$broadcast("item:updated");
-                $log.info("item:updated");
-            })
-        };
+// // CRUD FOR MENU ITEMS
+//
+//         var items = "/menus/:menu_id/items";
+//
+//         var getItems = function(){
+//           return $http.get(items);
+//         };
+//
+//         var singleItem = function(id) {
+//            return $http.get(items + "/" + id);
+//         };
+//
+//         var createItem = function(item) {
+//           return $http.post(items, item).then(function (response) {
+//                 $rootScope.$broadcast("item:added");
+//                 $log.info("item:added");
+//             })
+//         };
+//
+//         var deleteItem = function(item) {
+//           return $http.delete(items + "/" + item._id, item).then(function (response) {
+//                 console.log(response);
+//                 $rootScope.$broadcast("item:deleted");
+//                 $log.info("item:deleted");
+//             })
+//         };
+//
+//         var editItem = function(item) {
+//           return $http.put(items + "/" + item._id, item).then(function (response) {
+//                 $rootScope.$broadcast("item:updated");
+//                 $log.info("item:updated");
+//             })
+//         };
 
         return {
           getRests: getRests,
@@ -116,10 +118,10 @@ angular.module("menuModule")
           deleteMenu: deleteMenu,
           editMenu: editMenu
           // // Menu Items
-          getItems: getItems,
-          singleItem: singleItem,
-          addItem: createItem,
-          deleteItem: deleteItem,
-          editItem: editItem,
+          // getItems: getItems,
+          // singleItem: singleItem,
+          // addItem: createItem,
+          // deleteItem: deleteItem,
+          // editItem: editItem,
         };
     });

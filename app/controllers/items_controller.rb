@@ -1,11 +1,12 @@
 class ItemsController < ApplicationController
-	before_action :authenticate_user
+#   before_action :authenticate_user
   before_action :find_menu
-  before_action :find_item, only: [:show, :edit, :update, :destroy]
+  before_action :find_item, only:[:show, :edit, :update, :destroy]
   def index
     @items = @menu.items.all
     respond_to do |format|
       format.json { render json: @menu.items.as_json }
+    end
   end
 
   def show
@@ -39,7 +40,8 @@ class ItemsController < ApplicationController
     end
   end
 
-  private
+ private
+
   def find_menu
   	@menu = Menu.find params[:menu_id]
   end
@@ -47,7 +49,9 @@ class ItemsController < ApplicationController
   def find_item
   	@item = Item.find params[:id]
   end
+
   def item_params
-    params.require(:item).permit(:item_name, :item_description, :item_price)
+    params.require(:item).permit(:name, :description, :item_price)
   end
+
 end
