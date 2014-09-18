@@ -1,7 +1,7 @@
+
 angular.module("menuModule")
 
     .controller("menuCtrl", function ($scope, $route, $rootScope, $location, $routeParams, $anchorScroll, $log, menuSvc) {
-
 
         $scope.rests = menuSvc.getRests();
 
@@ -12,38 +12,20 @@ angular.module("menuModule")
           scrollTop: $("#scroll").offset().top }, 750);  });
         });
 
-// CRUD FOR MENU
-
-        // menuSvc.getMenus().then(function (menus) {
-        //    $log.info(menus);
-        //     $scope.menus = menus.data;
-        //  });
-
-        //  menuSvc.singleMenu($routeParams.id).then(function (response) {
-        //      $scope.singleMenu = response.data;
-        //  });
-
-        //  $scope.addMenu = function (menu) {
-        //      menuSvc.addMenu(menu);
-        //      $location.path("/admin/tacoboy");
-        //  };
-
-
 // CRUD FOR MENU ITEMS
 
         menuSvc.getItems().then(function (items) {
            $log.info(items);
-            $scope.items = items.data;
+            $scope.items = items.data.reverse();
 
          });
-         // 
+         //
         //  menuSvc.singleItem($routeParams.id).then(function (response) {
         //      $scope.singleItem = response.data;
         //  });
 
          $scope.addItem = function (item) {
              menuSvc.addItem(item);
-
          };
 
          $scope.editItem = function (item) {
@@ -54,23 +36,23 @@ angular.module("menuModule")
              menuSvc.deleteItem(id);
          };
 
-  //
-  //   $rootScope.$on("menu:deleted", function () {
+
+  //   $rootScope.$on("item:deleted", function () {
   //     menuSvc.getMenus().then(function (menus) {
   //       $scope.menus = menus.data;
   //       $route.reload();
   //     });
   // });
   //
-  //   $rootScope.$on("menu:added", function () {
+  //   $rootScope.$on("item:added", function () {
   //     menuSvc.getMenus().then(function (menus) {
   //       $scope.menus = menus.data;
   //     });
   // });
-
-    $rootScope.$on("item:added", function () {
-      menuSvc.getMsgs().then(function (items) {
-        $scope.msgs = msgs.data.reverse();
-    });
-  });
+  //
+  //   $rootScope.$on("item:added", function () {
+  //     menuSvc.getMsgs().then(function (items) {
+  //       $scope.msgs = msgs.data.reverse();
+  //   });
+  // });
 });
