@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140918151255) do
+ActiveRecord::Schema.define(version: 20140918160040) do
 
   create_table "items", force: true do |t|
     t.float    "item_price",  limit: 24
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20140918151255) do
     t.datetime "updated_at"
     t.string   "name"
     t.text     "description"
+    t.integer  "menu_id"
   end
 
   create_table "menus", force: true do |t|
