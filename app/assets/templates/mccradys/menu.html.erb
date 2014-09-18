@@ -1,6 +1,18 @@
 <div class="mccradysContainer">
 
 <h1>MCCRADYS</h2>
+  <div class="info">
+        <h1>{{rests[2].title}}</h1>
+        <h4>{{rests[2].phone}}</h4>
+        <h4>{{rests[2].address}}</h4>
+        <h4><a href="{{rests[2].site}}">{{rests[2].site}}</a></h4>
+    </div>
+
+    <div class="menu col-xs-10, col-xs-offset-2">
+        <div ng-repeat="item in items">
+        {{item.name}},{{item.description}} <span>{{item.item_price | currency}}</span>
+        </div>
+    </div>
 
 
 

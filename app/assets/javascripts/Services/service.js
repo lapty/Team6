@@ -51,7 +51,7 @@ angular.module("menuModule")
         var items = "/menus/1/items";
 
         var getItems = function(){
-          return $http.get(items);
+          return $http.get(items) ;
         };
 
         // var singleItem = function(id) {
@@ -83,11 +83,16 @@ angular.module("menuModule")
 
         return {
           getRests: getRests,
-          // // Menu Items
+
+          ///items1
           getItems: getItems,
-          // singleItem: singleItem,
           addItem: createItem,
           deleteItem: deleteItem,
           editItem: editItem,
+          //items2
+
+          //items3
+
+          //items4
         };
     });
