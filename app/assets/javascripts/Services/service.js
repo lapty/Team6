@@ -4,31 +4,25 @@ angular.module("menuModule")
 // CRUD FOR RESTAURANTS
         var rests = [
         {
-            title: "Monza",
-            link: "monza",
 
-            image: "http://littleworksofheart.typepad.com/.a/6a00d83452dc8469e20120a9735f46970b-350wi"
-
+            title: "Husk",
+            link: "husk",
+            image: "http://tomostyle.files.wordpress.com/2011/08/img_12681.jpg"
         },
         {
-            title: "Poes",
-            link: "poes",
-
-            image: "https://glutenfreegrrrrl.files.wordpress.com/2012/11/poes.jpg"
-
+            title: "McCrady's",
+            link: "mccradys",
+            image: "http://4.bp.blogspot.com/-6G8epA5qts0/T_zYoo0JFII/AAAAAAAAAUs/MJ7aOFVMovo/s1600/McCrady%2527s+Restaurant+Charleston+SC+Jason+Frye+Food+Writer.JPG"
         },
         {
-            title: "Closed for Business",
-            link: "cfb",
-
-            image: "http://hookworldwide.com/wp-content/uploads/2010/03/cfb_blog_background_color.jpg"
-
+            title: "Chicago's",
+            link: "chicagos",
+            image: "https://scontent-a-atl.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/429255_10150575184713071_1894770371_n.jpg?oh=d406c790f07cd762bb2792cd9c82e1dc&oe=549A2ACF"
         },
             {
-            title: "Tacoboy",
-            link: "tacoboy",
-
-            image: "https://pbs.twimg.com/profile_images/533007319/09-TBD-0005_taco_boy_downtown_logo_rgb.jpg"
+            title: "Minero",
+            link: "minero",
+            image: "https://pbs.twimg.com/profile_images/507665219108499458/uVk7-ZQs_400x400.jpeg"
 
             }
         ];
