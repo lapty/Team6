@@ -6,11 +6,12 @@
         <h4>{{rests[0].address}}</h4>
         <h4><a href="{{rests[0].site}}">{{rests[0].site}}</a></h4>
     </div>
-
+    <input class="menuSearch" type="text" ng-model="search" placeholder="Search menu items">
+    <div class="menuWrap">
     <div class="menu col-xs-10, col-xs-offset-2">
-        <div ng-repeat="item in items">
+        <div ng-repeat="item in items | filter: search">
         {{item.description}} <span>{{item.item_price | currency}}</span>
         </div>
     </div>
-
+</div>
 </div>
