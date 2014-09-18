@@ -12,14 +12,7 @@ angular.module("menuModule")
             site:  "huskrestaurant.com",
 
         },
-        {
-            title: "MCCRADY'S",
-            link: "2",
-            image: "http://4.bp.blogspot.com/-6G8epA5qts0/T_zYoo0JFII/AAAAAAAAAUs/MJ7aOFVMovo/s1600/McCrady%2527s+Restaurant+Charleston+SC+Jason+Frye+Food+Writer.JPG",
-            phone: "(843) 577-0025",
-            address: "2 Unity Alley, Charleston, SC 29401",
-            site: "http://mccradysrestaurant.com/",
-        },
+
         {
             title: "CHICAGO'S",
             link: "3",
@@ -28,6 +21,15 @@ angular.module("menuModule")
             address: "4401 Shallowford Rd NE, Roswell, GA 30075",
             site: "http://www.chicagosrestaurant.com/",
 
+        },
+
+        {
+            title: "MCCRADY'S",
+            link: "2",
+            image: "http://4.bp.blogspot.com/-6G8epA5qts0/T_zYoo0JFII/AAAAAAAAAUs/MJ7aOFVMovo/s1600/McCrady%2527s+Restaurant+Charleston+SC+Jason+Frye+Food+Writer.JPG",
+            phone: "(843) 577-0025",
+            address: "2 Unity Alley, Charleston, SC 29401",
+            site: "http://mccradysrestaurant.com/",
         },
             {
             title: "MINERO",
@@ -46,7 +48,7 @@ angular.module("menuModule")
 
 ////////CRUD FOR HUSK MENUS
 
-        var menus = "/menus";
+        var menus = "/menus/1";
 
         var getMenus = function(){
           return $http.get(menus);
