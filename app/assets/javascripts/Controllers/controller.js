@@ -1,7 +1,9 @@
 angular.module("menuModule")
-    .controller("menuCtrl", function ($scope, $rootScope, $location, $routeParams, $log, $anchorScroll, menuSvc) {
 
-//  CRUD FOR RESTAURANTS
+    .controller("menuCtrl", function ($scope, $route, $rootScope, $location, $routeParams, $log, menuSvc) {
+
+
+ // CRUD FOR RESTAURANTS
 
         $scope.rests = menuSvc.getRests();
 
@@ -101,4 +103,24 @@ angular.module("menuModule")
 //          $scope.deleteItem = function (id) {
 //              menuSvc.deleteItem(id);
 //          };
+
+
+    $rootScope.$on("menu:deleted", function () {
+      menuSvc.getMenus().then(function (menus) {
+        $scope.menus = menus.data;
+        $route.reload();
+      });
+  });
+
+    $rootScope.$on("menu:added", function () {
+      menuSvc.getMenus().then(function (menus) {
+        $scope.menus = menus.data;
+      });
+  });
+
+    $rootScope.$on("item:added", function () {
+      menuSvc.getMsgs().then(function (items) {
+        $scope.msgs = msgs.data.reverse();
+    });
+  });
 });
