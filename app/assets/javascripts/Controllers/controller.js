@@ -1,26 +1,27 @@
+
 angular.module("menuModule")
 
     .controller("menuCtrl", function ($scope, $route, $rootScope, $location, $routeParams, $anchorScroll, $log, menuSvc) {
 
 
         // var findRest = function (routeId) {
-        //         switch(routeId) {
-        //             case 1
-        //             return "husk";
-        //                 break;
-        //             case 2
-        //             return "mccradys";
-        //                 break;
-        //             case 3
-        //             return "chicagos";
-        //                 break;
-        //             case 4
-        //             return "minero";
-        //                 break;
-        //         }
+        //        switch(routeId) {
+        //            case 1
+        //            return "husk";
+        //                break;
+        //            case 2
+        //            return "mccradys";
+        //                break;
+        //            case 3
+        //            return "chicagos";
+        //                break;
+        //            case 4
+        //            return "minero";
+        //                break;
+        //        }
         // };
-
-
+        //
+        //
         // $scope.restContainer = findRest($routeParams.id);
 
 
@@ -35,25 +36,25 @@ angular.module("menuModule")
 // CRUD FOR MENU
 
         menuSvc.getMenus().then(function (menus) {
-           $log.info(menus);
+          $log.info(menus);
             $scope.menus = menus.data;
-         });
+        });
 
         //  menuSvc.singleMenu($routeParams.id).then(function (response) {
         //      $scope.singleMenu = response.data;
         //  });
 
-         $scope.addMenu = function (menu) {
-             menuSvc.addMenu(menu);
-             $location.path("/admin/tacoboy");
-         };
+        $scope.addMenu = function (menu) {
+            menuSvc.addMenu(menu);
+            $location.path("/admin/tacoboy");
+        };
 
 
 // // CRUD FOR MENU ITEMS
 //
-//         menuSvc.getItems().then(function (items) {
+//        menuSvc.getItems().then(function (items) {
 //            $log.info(items);
-//             $scope.items = items.data;
+//            $scope.items = items.data;
 //
 //          });
 //

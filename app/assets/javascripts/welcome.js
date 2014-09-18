@@ -20,35 +20,35 @@ angular.module("menuModule",["ngRoute"])
             controller: "menuCtrl"
         })
 
-        .when("/admin/menus/1", {
+        .when("/admin/menus/1/items", {
             templateUrl: "../assets/husk/menuAdmin.html.erb",
             controller: "menuCtrl"
         })
-        .when("/user/menus/1", {
+        .when("/user/menus/1/items", {
             templateUrl: "../assets/husk/menu.html.erb",
             controller: "menuCtrl"
         })
-        .when("/admin/menus/2", {
+        .when("/admin/menus/2/items", {
             templateUrl: "../assets/mccradys/menuAdmin.html.erb",
             controller: "menuCtrl"
         })
-        .when("/user/menus/2", {
+        .when("/user/menus/2/items", {
             templateUrl: "../assets/mccradys/menu.html.erb",
             controller: "menuCtrl"
         })
-        .when("/admin/menus/3", {
+        .when("/admin/menus/3/items", {
             templateUrl: "../assets/chicagos/menuAdmin.html.erb",
             controller: "menuCtrl"
         })
-        .when("/user/menus/3", {
+        .when("/user/menus/3/items", {
             templateUrl: "../assets/chicagos/menu.html.erb",
             controller: "menuCtrl"
         })
-        .when("/admin/menus/4", {
+        .when("/admin/menus/4/items", {
             templateUrl: "../assets/minero/menuAdmin.html.erb",
             controller: "menuCtrl"
         })
-        .when("/user/menus/4", {
+        .when("/user/menus/4/items", {
             templateUrl: "../assets/minero/menu.html.erb",
             controller: "menuCtrl"
         })
