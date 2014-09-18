@@ -4,25 +4,39 @@ angular.module("menuModule")
         var rests = [
         {
 
-            title: "Husk",
-            link: "husk",
-            image: "http://tomostyle.files.wordpress.com/2011/08/img_12681.jpg"
+            title: "HUSK",
+            link: "1",
+            image: "http://tomostyle.files.wordpress.com/2011/08/img_12681.jpg",
+            phone: "(843) 577-2500",
+            address: "76 Queen St, Charleston, SC 29401",
+            site:  "huskrestaurant.com",
+
         },
         {
-            title: "McCrady's",
-            link: "mccradys",
-            image: "http://4.bp.blogspot.com/-6G8epA5qts0/T_zYoo0JFII/AAAAAAAAAUs/MJ7aOFVMovo/s1600/McCrady%2527s+Restaurant+Charleston+SC+Jason+Frye+Food+Writer.JPG"
+            title: "MCCRADY'S",
+            link: "2",
+            image: "http://4.bp.blogspot.com/-6G8epA5qts0/T_zYoo0JFII/AAAAAAAAAUs/MJ7aOFVMovo/s1600/McCrady%2527s+Restaurant+Charleston+SC+Jason+Frye+Food+Writer.JPG",
+            phone: "(843) 577-0025",
+            address: "2 Unity Alley, Charleston, SC 29401",
+            site: "http://mccradysrestaurant.com/",
         },
         {
-            title: "Chicago's",
-            link: "chicagos",
-            image: "https://s3.amazonaws.com/uploads.hipchat.com/31349/1041630/8B4CqsAyT6TJG57/chicagos_logo.png"
+            title: "CHICAGO'S",
+            link: "3",
+            image: "https://s3.amazonaws.com/uploads.hipchat.com/31349/1041630/8B4CqsAyT6TJG57/chicagos_logo.png",
+            phone: "(770) 993-7464",
+            address: "4401 Shallowford Rd NE, Roswell, GA 30075",
+            site: "http://www.chicagosrestaurant.com/",
+
         },
             {
-            title: "Minero",
-            link: "minero",
-            image: "https://pbs.twimg.com/profile_images/507665219108499458/uVk7-ZQs_400x400.jpeg"
-
+            title: "MINERO",
+            link: "4",
+            image: "https://pbs.twimg.com/profile_images/507665219108499458/uVk7-ZQs_400x400.jpeg",
+            phone: "",
+            address: "",
+            site: "",
+            hours: "",
             }
         ];
 

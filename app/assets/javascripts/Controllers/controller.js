@@ -2,8 +2,29 @@ angular.module("menuModule")
 
     .controller("menuCtrl", function ($scope, $route, $rootScope, $location, $routeParams, $anchorScroll, $log, menuSvc) {
 
-        $scope.rests = menuSvc.getRests();
 
+        // var findRest = function (routeId) {
+        //         switch(routeId) {
+        //             case 1
+        //             return "husk";
+        //                 break;
+        //             case 2
+        //             return "mccradys";
+        //                 break;
+        //             case 3
+        //             return "chicagos";
+        //                 break;
+        //             case 4
+        //             return "minero";
+        //                 break;
+        //         }
+        // };
+
+
+        // $scope.restContainer = findRest($routeParams.id);
+
+
+        $scope.rests = menuSvc.getRests();
         ///SCROLLING DOWN
         $(function() {
         $(".welcomeWrap").on("click", "#scrollButt", function() {
@@ -11,14 +32,3 @@ angular.module("menuModule")
           scrollTop: $("#scroll").offset().top }, 750);  });
         });
 });
-
-/menus
-[
-    {
-        name: "McCrady's", items: [
-            { name: "Some fancy shit", price: 100.00},
-            { name: "Some more fancy shit", price: 100.00}
-        ]
-    }
-
-]
