@@ -2,9 +2,9 @@ angular.module("menuModule")
     .factory("menuSvc", function ( $rootScope, $log, $http) {
 
 // CRUD FOR RESTAURANTS
-        //
         var rests = [
         {
+
             title: "Husk",
             link: "husk",
             image: "http://tomostyle.files.wordpress.com/2011/08/img_12681.jpg"
@@ -21,8 +21,9 @@ angular.module("menuModule")
         },
             {
             title: "Minero",
-            link: "mineros",
+            link: "minero",
             image: "https://pbs.twimg.com/profile_images/507665219108499458/uVk7-ZQs_400x400.jpeg"
+
             }
         ];
 
@@ -99,7 +100,6 @@ angular.module("menuModule")
 //         };
 
         return {
-
           getRests: getRests,
           // Menus
           getMenus: getMenus,
