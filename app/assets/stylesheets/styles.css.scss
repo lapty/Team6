@@ -168,3 +168,22 @@ padding:0px; */
 .odd {
    background-color: rgba(0,0,0,.2);
 }
+
+/////////
+
+.admin {
+    .menuWrap {
+        height:500px;
+        font-family:helvetica;
+    }
+    input {
+        width:100px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+    p {
+        color:white;
+    }
+}
