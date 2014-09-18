@@ -3,32 +3,32 @@ angular.module("menuModule")
 
 // CRUD FOR RESTAURANTS
         //
-        // var rests = [
-        // {
-        //     title: "Monza",
-        //     link: "monza",
-        //     image: "http://www.travelandleisure.com/sites/default/files/styles/image_300x300/public/field/image/local-experts-charleston-best-budget-restaurants.jpg?itok=HVZSEP8d"
-        // },
-        // {
-        //     title: "Poes",
-        //     link: "poes",
-        //     image: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS9GMq6ZY2T_T0VUJuZjGIV-RDTszl3dTLbtngiaJPSl8nGNnXJ"
-        // },
-        // {
-        //     title: "Closed for Business",
-        //     link: "cfb",
-        //     image: "https://s3.amazonaws.com/ah.cms/images/P1040351.jpg"
-        // },
-        //     {
-        //     title: "Tacoboy",
-        //     link: "tacoboy",
-        //     image: "http://www.tacoboy.net/images/lrg_blockImageContact001.jpg"
-        //     }
-        // ];
-        //
-        // var getRests = function(){
-        //   return rests;
-        // };
+        var rests = [
+        {
+            title: "Monza",
+            link: "monza",
+            image: "http://littleworksofheart.typepad.com/.a/6a00d83452dc8469e20120a9735f46970b-350wi"
+        },
+        {
+            title: "Poes",
+            link: "poes",
+            image: "https://glutenfreegrrrrl.files.wordpress.com/2012/11/poes.jpg"
+        },
+        {
+            title: "Closed for Business",
+            link: "cfb",
+            image: "http://hookworldwide.com/wp-content/uploads/2010/03/cfb_blog_background_color.jpg"
+        },
+            {
+            title: "Tacoboy",
+            link: "tacoboy",
+            image: "https://pbs.twimg.com/profile_images/533007319/09-TBD-0005_taco_boy_downtown_logo_rgb.jpg"
+            }
+        ];
+
+        var getRests = function(){
+          return rests;
+        };
 
 ////////CRUD FOR MENUS
 
@@ -99,7 +99,8 @@ angular.module("menuModule")
 //         };
 
         return {
-          // getRests: getRests,
+
+          getRests: getRests,
           // Menus
           getMenus: getMenus,
           // singleMenu: singleMenu,
