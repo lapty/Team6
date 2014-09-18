@@ -1,5 +1,7 @@
 angular.module("menuModule",["ngRoute"])
 
+////mccradys husk minero chicagos
+
   .config(function ($routeProvider) {
 
     $routeProvider
@@ -13,98 +15,98 @@ angular.module("menuModule",["ngRoute"])
             controller: "menuCtrl"
         })
 
-        .when("/admin/tacoboy", {
-            templateUrl: "../assets/tacoboy/admin/menuList.html.erb",
+        .when("/admin/mccradys", {
+            templateUrl: "../assets/mccradys/admin/menuList.html.erb",
             controller: "menuCtrl"
         })
 
-        .when("/admin/poes", {
-            templateUrl: "../assets/poes/admin/menuList.html.erb",
+        .when("/admin/husk", {
+            templateUrl: "../assets/husk/admin/menuList.html.erb",
             controller: "menuCtrl"
         })
 
-        .when("/admin/monza", {
-            templateUrl: "../assets/monza/admin/menuList.html.erb",
+        .when("/admin/minero", {
+            templateUrl: "../assets/minero/admin/menuList.html.erb",
             controller: "menuCtrl"
         })
-        .when("/admin/cfb", {
-            templateUrl: "../assets/cfb/admin/menuList.html.erb",
-            controller: "menuCtrl"
-        })
-
-        .when("/admin/tacoboy/new", {
-            templateUrl: "../assets/tacoboy/admin/menuAdd.html.erb",
+        .when("/admin/chicagos", {
+            templateUrl: "../assets/chicagos/admin/menuList.html.erb",
             controller: "menuCtrl"
         })
 
-        .when("/admin/poes/new", {
-            templateUrl: "../assets/poes/admin/menuAdd.html.erb",
+        .when("/admin/mccradys/new", {
+            templateUrl: "../assets/mccradys/admin/menuAdd.html.erb",
             controller: "menuCtrl"
         })
 
-        .when("/admin/monza/new", {
-            templateUrl: "../assets/monza/admin/menuAdd.html.erb",
-            controller: "menuCtrl"
-        })
-        .when("/admin/cfb/new", {
-            templateUrl: "../assets/cfb/admin/menuAdd.html.erb",
+        .when("/admin/husk/new", {
+            templateUrl: "../assets/husk/admin/menuAdd.html.erb",
             controller: "menuCtrl"
         })
 
-        .when("/admin/tacoboy/:id", {
-            templateUrl: "../assets/tacoboy/admin/menu.html.erb",
+        .when("/admin/minero/new", {
+            templateUrl: "../assets/minero/admin/menuAdd.html.erb",
+            controller: "menuCtrl"
+        })
+        .when("/admin/chicagos/new", {
+            templateUrl: "../assets/chicagos/admin/menuAdd.html.erb",
             controller: "menuCtrl"
         })
 
-        .when("/admin/poes/:id", {
-            templateUrl: "../assets/poes/admin/menu.html.erb",
+        .when("/admin/mccradys/:id", {
+            templateUrl: "../assets/mccradys/admin/menu.html.erb",
             controller: "menuCtrl"
         })
 
-        .when("/admin/monza/:id", {
-            templateUrl: "../assets/monza/admin/menu.html.erb",
-            controller: "menuCtrl"
-        })
-        .when("/admin/cfb/:id", {
-            templateUrl: "../assets/cfb/admin/menu.html.erb",
+        .when("/admin/husk/:id", {
+            templateUrl: "../assets/husk/admin/menu.html.erb",
             controller: "menuCtrl"
         })
 
-        .when("/user/tacoboy", {
-            templateUrl: "../assets/tacoboy/user/menuList.html.erb",
+        .when("/admin/minero/:id", {
+            templateUrl: "../assets/minero/admin/menu.html.erb",
+            controller: "menuCtrl"
+        })
+        .when("/admin/chicagos/:id", {
+            templateUrl: "../assets/chicagos/admin/menu.html.erb",
             controller: "menuCtrl"
         })
 
-        .when("/user/poes", {
-            templateUrl: "../assets/poes/user/menuList.html.erb",
+        .when("/user/mccradys", {
+            templateUrl: "../assets/mccradys/user/menuList.html.erb",
             controller: "menuCtrl"
         })
 
-        .when("/user/monza", {
-            templateUrl: "../assets/monza/user/menuList.html.erb",
-            controller: "menuCtrl"
-        })
-        .when("/user/cfb", {
-            templateUrl: "../assets/cfb/user/menuList.html.erb",
+        .when("/user/husk", {
+            templateUrl: "../assets/husk/user/menuList.html.erb",
             controller: "menuCtrl"
         })
 
-        .when("/user/tacoboy/:id", {
-            templateUrl: "../assets/tacoboy/user/menu.html.erb",
+        .when("/user/minero", {
+            templateUrl: "../assets/minero/user/menuList.html.erb",
+            controller: "menuCtrl"
+        })
+        .when("/user/chicagos", {
+            templateUrl: "../assets/chicagos/user/menuList.html.erb",
             controller: "menuCtrl"
         })
 
-        .when("/user/poes/:id", {
-            templateUrl: "../assets/poes/user/menu.html.erb",
+        .when("/user/mccradys/:id", {
+            templateUrl: "../assets/mccradys/user/menu.html.erb",
             controller: "menuCtrl"
         })
 
-        .when("/user/monza/:id", {
-            templateUrl: "../assets/monza/user/menu.html.erb",
+        .when("/user/husk/:id", {
+            templateUrl: "../assets/husk/user/menu.html.erb",
             controller: "menuCtrl"
         })
-        .when("/user/cfb/:id", {
-            templateUrl: "../assets/cfb/user/menu.html.erb",
+
+        .when("/user/minero/:id", {
+            templateUrl: "../assets/minero/user/menu.html.erb",
+            controller: "menuCtrl"
+        })
+        .when("/user/chicagos/:id", {
+            templateUrl: "../assets/chicagos/user/menu.html.erb",
             controller: "menuCtrl"
         })
 

@@ -2,27 +2,34 @@ angular.module("menuModule")
     .factory("menuSvc", function ( $rootScope, $log, $http) {
 
 // CRUD FOR RESTAURANTS
-        //
         var rests = [
         {
             title: "Monza",
             link: "monza",
+
             image: "http://littleworksofheart.typepad.com/.a/6a00d83452dc8469e20120a9735f46970b-350wi"
+
         },
         {
             title: "Poes",
             link: "poes",
+
             image: "https://glutenfreegrrrrl.files.wordpress.com/2012/11/poes.jpg"
+
         },
         {
             title: "Closed for Business",
             link: "cfb",
+
             image: "http://hookworldwide.com/wp-content/uploads/2010/03/cfb_blog_background_color.jpg"
+
         },
             {
             title: "Tacoboy",
             link: "tacoboy",
+
             image: "https://pbs.twimg.com/profile_images/533007319/09-TBD-0005_taco_boy_downtown_logo_rgb.jpg"
+
             }
         ];
 
@@ -99,7 +106,6 @@ angular.module("menuModule")
 //         };
 
         return {
-
           getRests: getRests,
           // Menus
           getMenus: getMenus,

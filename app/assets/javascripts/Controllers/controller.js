@@ -1,12 +1,9 @@
 angular.module("menuModule")
 
     .controller("menuCtrl", function ($scope, $route, $rootScope, $location, $routeParams, $anchorScroll, $log, menuSvc) {
-
-
  // CRUD FOR RESTAURANTS
 
         $scope.rests = menuSvc.getRests();
-
 
         ///SCROLLING DOWN
         $(function() {
