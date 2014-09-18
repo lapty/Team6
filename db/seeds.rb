@@ -8,7 +8,7 @@
 menus = Menu.create([
   {menu_name: 'Husk Supper Menu', menu_section_name: ''},
   {menu_name: 'McCradys Dinner Menu', menu_section_name: ''},
-  {menu_name: 'Chicago Dinner Menu', menu_section_name: ''},
+  {menu_name: 'Chicago Brunch Menu', menu_section_name: ''},
   {menu_name: 'Minero Menu', menu_section_name: ''}
   ])
 
@@ -82,4 +82,25 @@ items = Item.create([ {description: 'Wood Fired Shishito Peppers with Kentucky S
 'Mathiasson, Flora Vermouth, “Yount Mill Vineyard,” Napa Valley-California, 2011', menu_id: 2},
 
 {name: 'Wild Bay Panna Cotta, Blackberry and Marigold', description:
-'Caves Carod, Muscat/Clairette, Clairette de Die, Rhone Valley-France, NV', menu_id: 2}])
+'Caves Carod, Muscat/Clairette, Clairette de Die, Rhone Valley-France, NV', menu_id: 2},
+
+{name: 'Eggs Vegetable Omelet', description:
+'Three egg omelet with mushrooms, spinach, tomatoes, sautéed onions, mozzarella', item_price: 9, menu_id: 3},
+
+{name: 'Denver Omelet', description:
+'Three egg omelet with bacon, peppers, sautéed onions, aged cheddar', item_price: 9, menu_id: 3},
+
+{name: 'Crab Benedict', description:
+'Two poached eggs, English muffin, fresh crabmeat, fried green tomatoes, hollandaise sauce', item_price: 11, menu_id: 3},
+
+{name: 'Classic Eggs Benedict', description:
+'Two poached eggs, toasted English muffin, grilled Canadian bacon, hollandaise sauce', item_price: 9, menu_id: 3},
+
+{name: 'Steak and Eggs Benedict', description:
+'Medallions of Beef tenderloin, toasted English muffin, two poached eggs and tomato hollandaise sauce', item_price: 13, menu_id: 3},
+
+{name: 'Creme Brûlée French Toast', description:
+'Thick cut brioche bread dipped in our brûlée batter topped with a caramelized sugar crust, warm maple syrup, severed with fresh bacon', item_price: 8, menu_id: 3},
+
+{name: 'Homemade Pancakes', description:
+'A stack of airy buttermilk pancakes served with warm maple syrup seasonal berries and whipped cream', item_price: 7, menu_id: 3}])
