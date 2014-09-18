@@ -1,11 +1,19 @@
 angular.module("menuModule")
 
-    .controller("menuCtrl", function ($scope, $route, $rootScope, $location, $routeParams, $log, menuSvc) {
+    .controller("menuCtrl", function ($scope, $route, $rootScope, $location, $routeParams, $anchorScroll, $log, menuSvc) {
 
 
  // CRUD FOR RESTAURANTS
 
         $scope.rests = menuSvc.getRests();
+
+
+        ///SCROLLING DOWN
+        $(function() {
+        $(".welcomeWrap").on("click", "#scrollButt", function() {
+        $('html, body').animate({
+          scrollTop: $("#scroll").offset().top }, 750);  });
+        });
 
 
     //    menuSvc.getRests().then(function (rests) {

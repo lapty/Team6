@@ -26,13 +26,12 @@ $test: 1px red solid;
         width:100%;
         font-size:5em;
         text-align:center;
-    /*     border:\$test; */
     }
     span {
         width:100%;
-        font-size:4.5em;
+        font-size:5em;
         position: relative;
-        top:550px;
+        top:500px;
         color:rgba(255,255,255,.9);
         text-align:center;
         transition:all .3s ease;
@@ -49,11 +48,9 @@ $test: 1px red solid;
 .restWrap {
     width:100%;
     padding:0px;
-    /* position:fixed; */
-/*     bottom:-250px; */
     background-color:rgba(0,0,0,.5);
     /* border:\$test; */
-    overflow-y:auto;
+    /* overflow-y:auto; */
 
 }
 
@@ -63,11 +60,23 @@ $test: 1px red solid;
     padding:0px;
     background-size:cover;
     text-align:center;
+    color:rgba(255,255,255,.9);
+    font-family: 'Open Sans', sans-serif;
+    font-size:3em;
+    font-weight:bolder;
+    opacity:.7;
+    transition:all .5s ease;
     span {
         position:relative;
-        font-size:2em;
-        color:white;
         top:90px;
+
+    }
+}
+
+.restBlock:hover {
+    opacity:1;
+    span {
+        text-shadow: red 0 3px 3px;
     }
 }
 
@@ -87,36 +96,33 @@ $test: 1px red solid;
     background-color:rgba(0,0,0,.9);
 }
 
-#row {
-  display: block;
-  margin-top: 2000px;
-}
 
-.scroller {
+/* .scroller {
     transition:2s ease;
 }
-
-.sticky.active {
+ */
+/* .sticky.active {
     position:fixed;
     top:0;
     z-index:3
-}
+} */
 
-.scroller {
+/* .scroller {
     transition:1s ease-in-out;
 }
 
-.scroller.active {
+.scroller.active { */
     /* position:fixed; */
-    top:200px;
-    transform: translateY(-650px);
-}
-
+/*     top:200px;
+transform: translateX(1000px); */
+/* } */
+/*
 .scroller2 {
     transition:1s ease-in-out;
 }
 
 .scroller2.active {
-    /* position:fixed; */
-    top:450px;
-}
+    position:fixed;
+    top:450px; */
+/* }
+ */
