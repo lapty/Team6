@@ -59,30 +59,6 @@ angular.module("menuModule")
              $location.path("/admin/tacoboy");
          };
 
-         $scope.goToMonza = function () {
-           $location.path("/admin/monza")
-         };
-
-         $scope.goToPoes = function () {
-           $location.path("/admin/poes")
-         };
-
-         $scope.goToTacoBoy = function () {
-           $location.path("/admin/tacoboy")
-         };
-
-         $scope.goToCfb = function () {
-           $location.path("/admin/cfb")
-         };
-
-         $scope.editMenu = function (menu) {
-             menuSvc.editMenu(menu);
-         };
-
-         $scope.deleteMenu = function (id) {
-             menuSvc.deleteMenu(id);
-         };
-
 
 // // CRUD FOR MENU ITEMS
 //
