@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   before_action :find_menu
   before_action :find_item, only: [:show, :edit, :update, :destroy]
   def index
-    @items = Item.all
+    @items = @menu.items.all
     respond_to do |format|
       format.json { render json: @menu.items.as_json }
   end
@@ -12,7 +12,7 @@ class ItemsController < ApplicationController
   end
 
   def new
-    @item = Item.new
+    @item = @menu.item.new
   end
 
   def create
@@ -26,7 +26,7 @@ class ItemsController < ApplicationController
   end
 
   def update
-    @item.update_attributes item_params
+    @menu.item.update_attributes item_params
     respond_to do |format|
       format.json { render json: @menu.item.as_json }
     end
@@ -41,7 +41,7 @@ class ItemsController < ApplicationController
 
   private
   def find_menu
-  	@menu = Menu.find params[:id]
+  	@menu = Menu.find params[:menu_id]
   end
 
   def find_item

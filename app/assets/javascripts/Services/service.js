@@ -1,29 +1,42 @@
 angular.module("menuModule")
     .factory("menuSvc", function ( $rootScope, $log, $http) {
 
-// CRUD FOR RESTAURANTS
         var rests = [
         {
 
-            title: "Husk",
-            link: "husk",
-            image: "http://tomostyle.files.wordpress.com/2011/08/img_12681.jpg"
+            title: "HUSK",
+            link: "1",
+            image: "http://tomostyle.files.wordpress.com/2011/08/img_12681.jpg",
+            phone: "(843) 577-2500",
+            address: "76 Queen St, Charleston, SC 29401",
+            site:  "huskrestaurant.com",
+
         },
         {
-            title: "McCrady's",
-            link: "mccradys",
-            image: "http://4.bp.blogspot.com/-6G8epA5qts0/T_zYoo0JFII/AAAAAAAAAUs/MJ7aOFVMovo/s1600/McCrady%2527s+Restaurant+Charleston+SC+Jason+Frye+Food+Writer.JPG"
+            title: "MCCRADY'S",
+            link: "2",
+            image: "http://4.bp.blogspot.com/-6G8epA5qts0/T_zYoo0JFII/AAAAAAAAAUs/MJ7aOFVMovo/s1600/McCrady%2527s+Restaurant+Charleston+SC+Jason+Frye+Food+Writer.JPG",
+            phone: "(843) 577-0025",
+            address: "2 Unity Alley, Charleston, SC 29401",
+            site: "http://mccradysrestaurant.com/",
         },
         {
-            title: "Chicago's",
-            link: "chicagos",
-            image: "https://scontent-a-atl.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/429255_10150575184713071_1894770371_n.jpg?oh=d406c790f07cd762bb2792cd9c82e1dc&oe=549A2ACF"
+            title: "CHICAGO'S",
+            link: "3",
+            image: "https://s3.amazonaws.com/uploads.hipchat.com/31349/1041630/8B4CqsAyT6TJG57/chicagos_logo.png",
+            phone: "(770) 993-7464",
+            address: "4401 Shallowford Rd NE, Roswell, GA 30075",
+            site: "http://www.chicagosrestaurant.com/",
+
         },
             {
-            title: "Minero",
-            link: "minero",
-            image: "https://pbs.twimg.com/profile_images/507665219108499458/uVk7-ZQs_400x400.jpeg"
-
+            title: "MINERO",
+            link: "4",
+            image: "https://pbs.twimg.com/profile_images/507665219108499458/uVk7-ZQs_400x400.jpeg",
+            phone: "",
+            address: "",
+            site: "",
+            hours: "",
             }
         ];
 
@@ -31,17 +44,13 @@ angular.module("menuModule")
           return rests;
         };
 
-////////CRUD FOR MENUS
+////////CRUD FOR HUSK MENUS
 
         var menus = "/menus";
 
         var getMenus = function(){
           return $http.get(menus);
         };
-
-        // var singleMenu = function(id) {
-        //    return $http.get(menus + "/" + id);
-        // };
 
         var createMenu = function(menu) {
           $http.post(menus, menu).then(function (response) {
@@ -64,7 +73,130 @@ angular.module("menuModule")
                 $log.info("menu:updated");
             })
         };
-//
+
+        ////////CRUD FOR HUSK MENUS
+
+                var menus = "/menus";
+
+                var getMenus = function(){
+                  return $http.get(menus);
+                };
+
+                var createMenu = function(menu) {
+                  $http.post(menus, menu).then(function (response) {
+                        $rootScope.$broadcast("menu:added");
+                        $log.info("menu:added");
+                    })
+                };
+
+                var deleteMenu = function(menu) {
+                  return $http.delete(menus + "/" + menu.id, menu).then(function (response) {
+                        console.log(response);
+                        $rootScope.$broadcast("menu:deleted");
+                        $log.info("menu:deleted");
+                    })
+                };
+
+                var editMenu = function(menu) {
+                  return $http.put(menus + "/" + menu.id, menu).then(function (response) {
+                        $rootScope.$broadcast("menu:updated");
+                        $log.info("menu:updated");
+                    })
+                };
+
+////////CRUD FOR HUSK MENUS
+
+        var menus = "/menus";
+
+        var getMenus = function(){
+          return $http.get(menus);
+        };
+
+        var createMenu = function(menu) {
+          $http.post(menus, menu).then(function (response) {
+                $rootScope.$broadcast("menu:added");
+                $log.info("menu:added");
+            })
+        };
+
+        var deleteMenu = function(menu) {
+          return $http.delete(menus + "/" + menu.id, menu).then(function (response) {
+                console.log(response);
+                $rootScope.$broadcast("menu:deleted");
+                $log.info("menu:deleted");
+            })
+        };
+
+        var editMenu = function(menu) {
+          return $http.put(menus + "/" + menu.id, menu).then(function (response) {
+                $rootScope.$broadcast("menu:updated");
+                $log.info("menu:updated");
+            })
+        };
+
+
+////////CRUD FOR HUSK MENUS
+
+        var menus = "/menus";
+
+        var getMenus = function(){
+          return $http.get(menus);
+        };
+
+        var createMenu = function(menu) {
+          $http.post(menus, menu).then(function (response) {
+                $rootScope.$broadcast("menu:added");
+                $log.info("menu:added");
+            })
+        };
+
+        var deleteMenu = function(menu) {
+          return $http.delete(menus + "/" + menu.id, menu).then(function (response) {
+                console.log(response);
+                $rootScope.$broadcast("menu:deleted");
+                $log.info("menu:deleted");
+            })
+        };
+
+        var editMenu = function(menu) {
+          return $http.put(menus + "/" + menu.id, menu).then(function (response) {
+                $rootScope.$broadcast("menu:updated");
+                $log.info("menu:updated");
+            })
+        };
+
+////////CRUD FOR HUSK MENUS
+
+        var menus = "/menus";
+
+        var getMenus = function(){
+          return $http.get(menus);
+        };
+
+        var createMenu = function(menu) {
+          $http.post(menus, menu).then(function (response) {
+                $rootScope.$broadcast("menu:added");
+                $log.info("menu:added");
+            })
+        };
+
+        var deleteMenu = function(menu) {
+          return $http.delete(menus + "/" + menu.id, menu).then(function (response) {
+                console.log(response);
+                $rootScope.$broadcast("menu:deleted");
+                $log.info("menu:deleted");
+            })
+        };
+
+        var editMenu = function(menu) {
+          return $http.put(menus + "/" + menu.id, menu).then(function (response) {
+                $rootScope.$broadcast("menu:updated");
+                $log.info("menu:updated");
+            })
+        };
+///////////////////////////////
+
+
 // // CRUD FOR MENU ITEMS
 //
 //         var items = "/menus/:menu_id/items";

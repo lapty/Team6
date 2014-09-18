@@ -1,6 +1,5 @@
 angular.module("menuModule",["ngRoute"])
 
-////mccradys husk minero chicagos
 
   .config(function ($routeProvider) {
 
@@ -15,19 +14,60 @@ angular.module("menuModule",["ngRoute"])
             controller: "menuCtrl"
         })
 
+
         .when("/admin", {
             templateUrl: "../assets/mainAdmin.html.erb",
             controller: "menuCtrl"
         })
 
-        .when("/admin/:id", {
-            templateUrl: "../assets/admin/menu.html.erb",
+        .when("/admin/menus/1", {
+            templateUrl: "../assets/husk/menuAdmin.html.erb",
             controller: "menuCtrl"
         })
-        .when("/user/:id", {
-            templateUrl: "../assets/user/menu.html.erb",
+        .when("/user/menus/1", {
+            templateUrl: "../assets/husk/menu.html.erb",
             controller: "menuCtrl"
         })
+        .when("/admin/menus/2", {
+            templateUrl: "../assets/mccradys/menuAdmin.html.erb",
+            controller: "menuCtrl"
+        })
+        .when("/user/menus/2", {
+            templateUrl: "../assets/mccradys/menu.html.erb",
+            controller: "menuCtrl"
+        })
+        .when("/admin/menus/3", {
+            templateUrl: "../assets/chicagos/menuAdmin.html.erb",
+            controller: "menuCtrl"
+        })
+        .when("/user/menus/3", {
+            templateUrl: "../assets/chicagos/menu.html.erb",
+            controller: "menuCtrl"
+        })
+        .when("/admin/menus/4", {
+            templateUrl: "../assets/minero/menuAdmin.html.erb",
+            controller: "menuCtrl"
+        })
+        .when("/user/menus/4", {
+            templateUrl: "../assets/minero/menu.html.erb",
+            controller: "menuCtrl"
+        })
+        // .when("/admin/:id", {
+        //     templateUrl: "../assets/admin/menu.html.erb",
+        //     controller: "menuCtrl"
+        // })
+        // .when("/user/:id", {
+        //     templateUrl: "../assets/user/menu.html.erb",
+        //     controller: "menuCtrl"
+        // })
+        // .when("/admin/:id", {
+        //     templateUrl: "../assets/admin/menu.html.erb",
+        //     controller: "menuCtrl"
+        // })
+        // .when("/user/:id", {
+        //     templateUrl: "../assets/user/menu.html.erb",
+        //     controller: "menuCtrl"
+        // })
 
         .otherwise({
             redirectTo: "/"
