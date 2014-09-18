@@ -6,7 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 menus = Menu.create([
-  {menu_name: 'Husk Supper Menu', menu_section_name: ''}
+  {menu_name: 'Husk Supper Menu', menu_section_name: ''},
+  {menu_name: 'McCradys Dinner Menu', menu_section_name: ''},
+  {menu_name: 'Chicago Dinner Menu', menu_section_name: ''},
+  {menu_name: 'Minero Menu', menu_section_name: ''}
   ])
 
 items = Item.create([ {description: 'Wood Fired Shishito Peppers with Kentucky Soy Ponzu, Benne', item_price: 8, menu_id: 1}, 
@@ -47,4 +50,36 @@ items = Item.create([ {description: 'Wood Fired Shishito Peppers with Kentucky S
 
 {description: 'Pink Eyed Peas with Roasted Peppers, Onions and Scallions', item_price: 8, menu_id: 1},
 
-{description: 'Baked Geechie Boy Grits with Sweetwater Valley Cheddar', item_price: 8, menu_id: 1}])
+{description: 'Baked Geechie Boy Grits with Sweetwater Valley Cheddar', item_price: 8, menu_id: 1},
+
+{name: 'Summer Melon, Edisto Cucumber and Fennel', description:
+'Junmai Nigori, Tozai, “Snow Maiden,” Kyoto-Japan', menu_id: 2},
+
+{name: 'Cox Farms Beef Tartare*, Farro, Mustard Seed and Maple Hibiscus', description:'Foggy Ridge Cider, “First Fruit,” Dugspur-Virginia, 2012', menu_id: 2},
+
+{name: 'Everglades Frog Legs, Muscadine, Bell Pepper, Chervil and Nasturtium', description: 'Alfred Merkelbach, Riesling-Spatlese, “Erdener Treppchen,” Mosel-Germany, 2012', menu_id: 2},
+
+{name: 'Swordfish, Red Cabbage, Purslane and Black Truffle', description:
+'Thomas Labaille, Pinot Noir (Rosé), “L’Authentique,” Sancerre-France, 2013', menu_id: 2},
+
+{name: 'Snapper, Tomato, Zucchini, Garlic, Sorrel, and Dill', description:
+'Val de Mer, Patrick Piuze, Chardonney, Chablis-France, 2011', menu_id: 2},
+
+{name: 'Cox Farms Ribeye*, Beet, Blueberry and Shiso', description:
+'Broc Cellars, Carignan, Anderson Valley-California, 2012', menu_id: 2},
+
+{name: 'Tennessee Rabbit, Field Peas, Potato, Onion, and Pine', description:
+'Sattler, St. Laurent, Burgenland-Austria, 2012', menu_id: 2},
+
+
+{name: 'Duo of Berkshire Pork*, Leek, Pear, Mint and Vadouvan', description:
+'Marcel Giraudon, Pinot Noir, Bougogne-Chitry-France, 2013', menu_id: 2},
+
+{name: 'Baba Cake, Lavender, Honey and Citrus', description:
+'Brooks, Late Harvest Riesling, “Tethys,” Willamette Valley-Oregon, 2012', menu_id: 2},
+
+{name: 'Chocolate Tart, Nectarine, Popcorn and Basil', description:
+'Mathiasson, Flora Vermouth, “Yount Mill Vineyard,” Napa Valley-California, 2011', menu_id: 2},
+
+{name: 'Wild Bay Panna Cotta, Blackberry and Marigold', description:
+'Caves Carod, Muscat/Clairette, Clairette de Die, Rhone Valley-France, NV', menu_id: 2}])
