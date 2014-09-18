@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140917171345) do
+ActiveRecord::Schema.define(version: 20140918151255) do
 
   create_table "items", force: true do |t|
-    t.text     "item_name"
-    t.string   "item_description"
-    t.float    "item_price",       limit: 24
+    t.float    "item_price",  limit: 24
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.text     "description"
   end
 
   create_table "menus", force: true do |t|
