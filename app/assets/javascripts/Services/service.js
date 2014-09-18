@@ -46,46 +46,12 @@ angular.module("menuModule")
           return rests;
         };
 
-////////CRUD FOR HUSK MENUS
-
-        // var menus = "/menus/1/items";
-        //
-        // var getMenus = function(){
-        //   return $http.get(menus);
-        // };
-        //
-        // var createMenu = function(menu) {
-        //   $http.post(menus, menu).then(function (response) {
-        //         $rootScope.$broadcast("menu:added");
-        //         $log.info("menu:added");
-        //     })
-        // };
-        //
-        // var deleteMenu = function(menu) {
-        //   return $http.delete(menus + "/" + menu.id, menu).then(function (response) {
-        //         console.log(response);
-        //         $rootScope.$broadcast("menu:deleted");
-        //         $log.info("menu:deleted");
-        //     })
-        // };
-        //
-        // var editMenu = function(menu) {
-        //   return $http.put(menus + "/" + menu.id, menu).then(function (response) {
-        //         $rootScope.$broadcast("menu:updated");
-        //         $log.info("menu:updated");
-        //     })
-        // };
-
-
-///////////////////////////////
-
-
 // CRUD FOR MENU ITEMS
 
         var items = "/menus/1/items";
 
         var getItems = function(){
-          return $http.get(items);
+          return $http.get(items) ;
         };
 
         // var singleItem = function(id) {
@@ -100,7 +66,8 @@ angular.module("menuModule")
         };
 
         var deleteItem = function(item) {
-          return $http.delete(items + "/" + item._id, item).then(function (response) {
+          console.log(item);
+          return $http.delete("/menus/" + item.menu_id + "/items/" + item.id, item).then(function (response) {
                 console.log(response);
                 $rootScope.$broadcast("item:deleted");
                 $log.info("item:deleted");
@@ -108,7 +75,7 @@ angular.module("menuModule")
         };
 
         var editItem = function(item) {
-          return $http.put(items + "/" + item._id, item).then(function (response) {
+          return $http.put("/menus/" + item.menu_id + "/items/" + item.id, item).then(function (response) {
                 $rootScope.$broadcast("item:updated");
                 $log.info("item:updated");
             })

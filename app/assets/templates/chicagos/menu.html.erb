@@ -2,6 +2,23 @@
 
 <h1>CHICAGO'S</h2>
 
+<div class="chicagosContainer">
+  <div class="info">
+        <h1>{{rests[1].title}}</h1>
+        <h4>{{rests[1].phone}}</h4>
+        <h4>{{rests[1].address}}</h4>
+        <h4><a href="{{rests[1].site}}">{{rests[1].site}}</a></h4>
+    </div>
+
+    <div class="menu col-xs-10, col-xs-offset-2">
+        <div ng-repeat="item in items">
+        {{item.name}},{{item.description}} <span>{{item.item_price | currency}}</span>
+        </div>
+    </div>
+
+
+
+</div>
 
 
 </div>

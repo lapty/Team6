@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
   def index
     @items = @menu.items.all
     respond_to do |format|
-      format.json { render json: @menu.items.as_json }
+      format.json { render json: @items.as_json }
     end
   end
 
@@ -19,7 +19,7 @@ class ItemsController < ApplicationController
   def create
     @item = @menu.items.create item_params
     respond_to do |format|
-      format.json { render json: @menu.item.as_json }
+      format.json { render json: @item.as_json }
     end
   end
 
@@ -29,14 +29,14 @@ class ItemsController < ApplicationController
   def update
     @menu.item.update_attributes item_params
     respond_to do |format|
-      format.json { render json: @menu.item.as_json }
+      format.json { render json: @item.as_json }
     end
   end
 
   def destroy
     @item.delete
     respond_to do |format|
-      format.json { render json: @menu.item.as_json }
+      format.json { render json: @item.as_json }
     end
   end
 
