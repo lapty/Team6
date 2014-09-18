@@ -12,15 +12,14 @@ angular.module("menuModule")
           scrollTop: $("#scroll").offset().top }, 750);  });
         });
 
+// CRUD FOR MENU ITEMS
 
-// // CRUD FOR MENU ITEMS
-
-       menuSvc.getItems().then(function (items) {
+        menuSvc.getItems().then(function (items) {
            $log.info(items);
-           $scope.items = items.data;
+            $scope.items = items.data.reverse();
 
          });
-
+         //
         //  menuSvc.singleItem($routeParams.id).then(function (response) {
         //      $scope.singleItem = response.data;
         //  });
@@ -38,14 +37,14 @@ angular.module("menuModule")
          };
 
 
-  //   $rootScope.$on("menu:deleted", function () {
+  //   $rootScope.$on("item:deleted", function () {
   //     menuSvc.getMenus().then(function (menus) {
   //       $scope.menus = menus.data;
   //       $route.reload();
   //     });
   // });
   //
-  //   $rootScope.$on("menu:added", function () {
+  //   $rootScope.$on("item:added", function () {
   //     menuSvc.getMenus().then(function (menus) {
   //       $scope.menus = menus.data;
   //     });

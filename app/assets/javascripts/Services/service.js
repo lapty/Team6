@@ -66,7 +66,8 @@ angular.module("menuModule")
         };
 
         var deleteItem = function(item) {
-          return $http.delete(items + "/" + item._id, item).then(function (response) {
+          console.log(item);
+          return $http.delete("/menus/" + item.menu_id + "/items/" + item.id, item).then(function (response) {
                 console.log(response);
                 $rootScope.$broadcast("item:deleted");
                 $log.info("item:deleted");
@@ -74,7 +75,7 @@ angular.module("menuModule")
         };
 
         var editItem = function(item) {
-          return $http.put(items + "/" + item._id, item).then(function (response) {
+          return $http.put("/menus/" + item.menu_id + "/items/" + item.id, item).then(function (response) {
                 $rootScope.$broadcast("item:updated");
                 $log.info("item:updated");
             })
