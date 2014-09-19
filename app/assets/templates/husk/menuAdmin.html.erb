@@ -1,7 +1,4 @@
 <div class="huskWrap col-md-12">
-
-
-
 <div class="admin">
 
     <div class="info">
@@ -20,11 +17,11 @@
     <div class="menu menuWrap col-md-8 col-md-offset-2">
 
 
-    <form ng-submit="editItems(item)" ng-repeat="item in items">
+    <form ng-repeat="item in items">
       <!-- <di class="menu col-xs-10, col-xs-offset-2"> -->
       <textarea rows="2" cols="60" ng-model="item.description" value="item.description"></textarea>
       <input ng-model="item.item_price" value="item.item_price | currency">
-      <button class="btn btn-success" type="submit">Edit Item</button>
+      <button ng-click="editItem(item)" class="btn btn-success">Edit Item</button>
       <button ng-click="deleteItem(item)" class="btn btn-danger">Delete</button>
     </form>
   </div>
