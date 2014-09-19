@@ -1,3 +1,6 @@
+<div class="welcomeWrap">
+<div class="devForm">
+
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -11,7 +14,9 @@
     <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
   <% end -%>
 
-  <div><%= f.submit "Log in" %></div>
+  <div id="submit"><%= f.submit "LOG IN" %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+</div>
